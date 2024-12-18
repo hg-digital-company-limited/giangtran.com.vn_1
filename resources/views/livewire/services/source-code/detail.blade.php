@@ -11,7 +11,7 @@
                 <img src="/logo/giangtran.com.vn.dark.webp" alt="logo" class="img-fluid" style="width: 150px;">
                 <div class="loading-bar"></div>
             </div>
-    </div>
+        </div>
         <div>
             <div class="tap-top"><i data-feather="chevrons-up"></i></div>
 
@@ -40,8 +40,7 @@
                                                     href="https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg"
                                                     data-caption="<strong>{{ $sourceCodeDetail->name }}</strong>">
                                                     <img src="https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg"
-                                                        class="img-fluid"
-                                                        alt="{{ $sourceCodeDetail->name }}"
+                                                        class="img-fluid" alt="{{ $sourceCodeDetail->name }}"
                                                         style="max-width: 100%; border-radius: 5px;">
                                                 </a>
                                             </div>
@@ -50,25 +49,33 @@
                                                 <div class="mt-2">
                                                     <h3 class="d-none d-md-block"><span
                                                             class="badge badge-pill badge-success"
-                                                            style="padding: 6px;"> Miễn Phí </span> [MS: #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
-                                                        </h3>
+                                                            style="padding: 6px;"> {{ $sourceCodeDetail->category->name }} </span> [MS:
+                                                        #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
+                                                    </h3>
 
                                                     <h3 class="d-block d-md-none mt-3"><span
                                                             class="badge badge-pill badge-primary"
-                                                            style="padding: 6px;"> Có Phí </span> [MS: #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
-                                                        </h3>
+                                                            style="padding: 6px;"> Có Phí </span> [MS:
+                                                        #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
+                                                    </h3>
 
-                                                    <div class="row mt-2">
-                                                        <div class="col-md-2 col-6">
-                                                            <i class="icofont icofont-eye-alt"></i> Lượt xem: {{ $sourceCodeDetail->view_count }}
+                                                    <div class="row mt-2"
+                                                        style="display: flex;flex-wrap: nowrap;">
+                                                        <div
+                                                            style="width: inherit; ">
+                                                            <i class="icofont icofont-eye-alt"></i> Lượt xem:
+                                                            {{ $sourceCodeDetail->view_count }}
                                                         </div>
 
-                                                        <div class="col-md-2 col-6">
-                                                            <i class="icofont icofont-history"></i> Lượt mua: {{ $sourceCodeDetail->purchase_count }}
+                                                        <div
+                                                            style="width: inherit;">
+                                                            <i class="icofont icofont-history"></i> Lượt mua:
+                                                            {{ $sourceCodeDetail->purchase_count }}
                                                         </div>
                                                     </div>
 
-                                                    <span class="mt-2"> Cập Nhật Gần Nhất Vào: {{ $sourceCodeDetail->updated_at }}
+                                                    <span class="mt-2"> Cập Nhật Gần Nhất Vào:
+                                                        {{ $sourceCodeDetail->updated_at }}
                                                     </span>
 
                                                     <div class="col-md-12 card card-body text-light mt-3"
@@ -90,8 +97,8 @@
                                                         <span>Giá Công Khai: <strong class="text-danger">
                                                                 {{ number_format($sourceCodeDetail->price) }}<sup>VND</sup></strong></span>
 
-                                                        <div class="row mt-2">
-                                                            <div class="col-md-2 col-6">
+                                                        <div class="row mt-2" style="display: flex;flex-wrap: nowrap;">
+                                                            <div  style="width: inherit;">
                                                                 <span class="badge badge-danger text-white"
                                                                     style="width: 100%; padding: 10px; cursor: pointer;"
                                                                     onclick="window.open('{{ $sourceCodeDetail->demo }}');">
@@ -99,7 +106,7 @@
                                                                     Demo </span>
                                                             </div>
 
-                                                            <div class="col-md-2 col-6">
+                                                            <div style="width: inherit;">
                                                                 <span class="badge badge-dark text-white"
                                                                     data-bs-toggle="modal"
                                                                     data-bs-target="#exampleModalbalancebox"
@@ -247,23 +254,23 @@
 
                     <script>
                         document.addEventListener("DOMContentLoaded", function() {
-        const galleryDiv = document.getElementById("content-gallery");
-        const images = galleryDiv.getElementsByTagName("img");
+                            const galleryDiv = document.getElementById("content-gallery");
+                            const images = galleryDiv.getElementsByTagName("img");
 
-        for (let i = 0; i < images.length; i++) {
-            const img = images[i];
-            const src = img.src;
-            const alt = img.alt;
+                            for (let i = 0; i < images.length; i++) {
+                                const img = images[i];
+                                const src = img.src;
+                                const alt = img.alt;
 
-            const anchor = document.createElement("a");
-            anchor.setAttribute("data-fancybox", "gallery");
-            anchor.setAttribute("href", src);
-            anchor.setAttribute("data-caption", `<strong>${alt}</strong>`);
+                                const anchor = document.createElement("a");
+                                anchor.setAttribute("data-fancybox", "gallery");
+                                anchor.setAttribute("href", src);
+                                anchor.setAttribute("data-caption", `<strong>${alt}</strong>`);
 
-            img.parentNode.insertBefore(anchor, img);
-            anchor.appendChild(img);
+                                img.parentNode.insertBefore(anchor, img);
+                                anchor.appendChild(img);
 
-            img.style.width = "100%";
+                                img.style.width = "100%";
                                 img.style.height = "auto";
                             }
                         });
