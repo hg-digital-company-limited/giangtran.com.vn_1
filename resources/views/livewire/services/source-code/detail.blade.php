@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Chi Tiết Mã Nguồn - HG DIGITAL</title>
+        <title>Chi Tiết Mã Nguồn - GIANGTRAN.COM.VN</title>
 
     </head>
 

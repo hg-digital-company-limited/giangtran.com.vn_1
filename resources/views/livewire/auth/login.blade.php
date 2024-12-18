@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Đăng Nhập Tài Khoản - HG DIGITAL</title>
+        <title>Đăng Nhập Tài Khoản - GIANGTRAN.COM.VN</title>
     </head>
     <body id="content">
         <div class="loader-wrapper" style="z-index: 999999;">

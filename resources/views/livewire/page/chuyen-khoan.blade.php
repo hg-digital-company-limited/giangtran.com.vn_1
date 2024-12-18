@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Nạp Tiền - HG DIGITAL</title>
+        <title>Nạp Tiền - GIANGTRAN.COM.VN</title>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </head>

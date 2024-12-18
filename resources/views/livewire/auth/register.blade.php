@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Đăng Ký Tài Khoản - HG DIGITAL</title>
+        <title>Đăng Ký Tài Khoản - GIANGTRAN.COM.VN</title>
 
 
     </head>

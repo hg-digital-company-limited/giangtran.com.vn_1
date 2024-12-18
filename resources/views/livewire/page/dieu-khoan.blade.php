@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Điều Khoản & Chính Sách - HG DIGITAL</title>
+        <title>Điều Khoản & Chính Sách - GIANGTRAN.COM.VN</title>
         <link rel="stylesheet" href="/assets/static/style.css?v=410833453">
         <link rel="stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

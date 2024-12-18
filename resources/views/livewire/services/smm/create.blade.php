@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Tạo Đơn Tăng Tương Tác - HG DIGITAL</title>
+        <title>Tạo Đơn Tăng Tương Tác - GIANGTRAN.COM.VN</title>
         <style>
             li {
                 padding-top: 5px;

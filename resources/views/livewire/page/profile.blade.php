@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Thông Tin Tài Khoản - HG DIGITAL</title>
+        <title>Thông Tin Tài Khoản - GIANGTRAN.COM.VN</title>
 
 
 

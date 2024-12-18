@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Quản Lý Mã Nguồn - HG DIGITAL</title>
+        <title>Quản Lý Mã Nguồn - GIANGTRAN.COM.VN</title>
     </head>
 
     <body id="content">

@@ -1,6 +1,6 @@
 <div>
     <head>
-     <title>Đặt Lại Mật Khẩu - HG DIGITAL</title>
+     <title>Đặt Lại Mật Khẩu - GIANGTRAN.COM.VN</title>
 
     </head>
     <body id="content">

@@ -2,7 +2,7 @@
 
 
     <head>
-        <title>Kho Mã Nguồn - HG DIGITAL</title>
+        <title>Kho Mã Nguồn - GIANGTRAN.COM.VN</title>
     </head>
 
     <body id="content">

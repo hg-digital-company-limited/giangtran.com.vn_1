@@ -1,6 +1,6 @@
 <div>
     <head>
-        <title>Đặt Lại Mật Khẩu - HG DIGITAL</title>
+        <title>Đặt Lại Mật Khẩu - GIANGTRAN.COM.VN</title>
 
         {{-- <link rel="stylesheet" href="/assets/static/style.css?v=62348332"> --}}
     </head>

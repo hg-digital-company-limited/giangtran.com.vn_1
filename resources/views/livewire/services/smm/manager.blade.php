@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Quản Lý Tăng Tương Tác - HG DIGITAL</title>
+        <title>Quản Lý Tăng Tương Tác - GIANGTRAN.COM.VN</title>
 
 
     </head>

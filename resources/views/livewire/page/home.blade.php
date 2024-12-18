@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Trang Chủ - HG DIGITAL</title>
+        <title>Trang Chủ - GIANGTRAN.COM.VN</title>
     </head>
     <body id="content">
         <div class="loader-wrapper" style="z-index: 999999;">
