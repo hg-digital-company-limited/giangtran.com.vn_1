@@ -61,7 +61,6 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(asset('/logo/giangtran.com.vn.png'))
             ->brandLogoHeight('2rem')
             ->favicon('/logo/icon.png')
-            ->brandName('HG DIGITAL')
-            ->viteTheme('resources/css/filament/admin/theme.css');
+            ->brandName('HG DIGITAL');
     }
 }
