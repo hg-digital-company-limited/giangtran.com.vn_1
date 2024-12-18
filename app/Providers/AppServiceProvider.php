@@ -23,6 +23,14 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\SmmOrder\SmmOrderRepositoryInterface::class,
             \App\Repositories\SmmOrder\SmmOrderEloquentRepository::class
         );
+        $this->app->singleton(
+            \App\Repositories\SourceCodeOrder\SourceCodeOrderRepositoryInterface::class,
+            \App\Repositories\SourceCodeOrder\SourceCodeOrderEloquentRepository::class
+        );
+        $this->app->singleton(
+            \App\Repositories\SourceCodeProduct\SourceCodeProductRepositoryInterface::class,
+            \App\Repositories\SourceCodeProduct\SourceCodeProductEloquentRepository::class
+        );
     }
 
     /**

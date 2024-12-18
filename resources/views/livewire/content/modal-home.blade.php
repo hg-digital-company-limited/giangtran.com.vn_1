@@ -21,7 +21,7 @@ aria-labelledby="exampleModalCenter1" aria-hidden="true">
                         Nhanh Ch&oacute;ng&nbsp;<a href="/tiep-thi-lien-ket"><span
                                 style="color:#3498db">Tại Đ&acirc;y</span></a></strong></p> --}}
                 <p style="text-align:center">Nếu C&oacute; Bạn C&oacute; Bất Cứ Vấn Đề Hoặc
-                    G&oacute;p &Yacute; Đừng Ngần Ngại Li&ecirc;n Hệ Nh&oacute;m Hỗ Trợ, HGDIGITAL Sẽ
+                    G&oacute;p &Yacute; Đừng Ngần Ngại Li&ecirc;n Hệ Nh&oacute;m Hỗ Trợ, GIANGTRAN.COM.VN Sẽ
                     Cải Thiện Để Mọi Người Sử Dụng Dịch Vụ Được Tốt Nhất.</p>
 
                 <p style="text-align:center">Hỗ Trợ Nhanh Qua: <a
