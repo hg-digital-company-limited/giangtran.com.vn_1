@@ -25,17 +25,19 @@ aria-labelledby="exampleModalbalancebox" aria-modal="true">
                                     <label class="form-check-label" for="radio14">
                                         <div> <span class="f-12 f-light"
                                                 style="white-space: nowrap;"> Số Dư Tài Khoản
-                                            </span> <span class="f-w-600">0<sup>đ</sup></span>
+                                            </span> <span class="f-w-600">{{ number_format($balance) }}<sup>đ</sup></span>
                                             <div style="display: flex">
-                                                <span
-                                                    class="badge badge-light-danger rounded-pill"
-                                                    id="badge_radio14_df">Không Đủ Điều
-                                                    Kiện</span>
-
-                                                <span
-                                                    class="badge badge-light-success rounded-pill"
-                                                    id="badge_radio14_scc"
-                                                    style="display: none;"> Khả Dụng </span>
+                                                @if ($balance < $sourceCodeDetail->price)
+                                                    <span
+                                                        class="badge badge-light-danger rounded-pill"
+                                                        id="badge_radio14_df"> Không Đủ Điều
+                                                        Kiện</span>
+                                                @else
+                                                    <span
+                                                        class="badge badge-light-success rounded-pill"
+                                                        id="badge_radio14_scc"
+                                                        style=" "> Khả Dụng </span>
+                                                @endif
                                                 <input class="form-check-input" id="radio14"
                                                     type="radio" name="radio1" checked
                                                     onchange="Method_payment()">
@@ -83,13 +85,13 @@ aria-labelledby="exampleModalbalancebox" aria-modal="true">
 
                     <div class="mt-4">
                         <span> Tổng Thanh Toán: <strong class="text-danger"><span
-                                    id="amount-total">0</span><sup>VND</sup> <sup
+                                    id="amount-total">{{ number_format(  $sourceCodeDetail->price) }}</span><sup>VND</sup> <sup
                                     id="discount-show"></sup></strong></span>
 
                         <div class="checkbox p-0">
                             <input id="dieuKhoan" type="checkbox" checked>
                             <label class="text-muted" for="dieuKhoan"> Đồng Ý Với </label> <a
-                                href="/dieu-khoa" class="txt-primary"> Điều Khoản Sử Dụng Dịch
+                                href="/dieu-khoan" class="txt-primary"> Điều Khoản Sử Dụng Dịch
                                 Vụ </a>
                         </div>
 

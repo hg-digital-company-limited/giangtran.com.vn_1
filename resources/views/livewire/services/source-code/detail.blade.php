@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title>Chi Tiết Mã Nguồn - GIANGTRAN.COM.VN</title>
+        <title>{{ $sourceCodeDetail->name }} - GIANGTRAN.COM.VN</title>
 
     </head>
 
@@ -38,10 +38,10 @@
                                             <div class="col-md-4">
                                                 <a data-fancybox="gallery"
                                                     href="https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg"
-                                                    data-caption="<strong> Code Fake Bill , CCCD, Hộ Chiếu Giá 4M6 (Code Xịn Trong Mắt Các Bé Chứ Thật Ra Như Cái ...) </strong>">
+                                                    data-caption="<strong>{{ $sourceCodeDetail->name }}</strong>">
                                                     <img src="https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg"
                                                         class="img-fluid"
-                                                        alt="Code Fake Bill , CCCD, Hộ Chiếu Giá 4M6 (Code Xịn Trong Mắt Các Bé Chứ Thật Ra Như Cái ...)"
+                                                        alt="{{ $sourceCodeDetail->name }}"
                                                         style="max-width: 100%; border-radius: 5px;">
                                                 </a>
                                             </div>
@@ -50,28 +50,26 @@
                                                 <div class="mt-2">
                                                     <h3 class="d-none d-md-block"><span
                                                             class="badge badge-pill badge-success"
-                                                            style="padding: 6px;"> Miễn Phí </span> [MS: #11]Code Fake
-                                                        Bill , CCCD, Hộ Chiếu Giá 4M6 (Code Xịn Trong Mắt Các Bé Chứ
-                                                        Thật Ra Như Cái ...)</h3>
+                                                            style="padding: 6px;"> Miễn Phí </span> [MS: #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
+                                                        </h3>
 
                                                     <h3 class="d-block d-md-none mt-3"><span
                                                             class="badge badge-pill badge-primary"
-                                                            style="padding: 6px;"> Có Phí </span> [MS: #11]Code Fake
-                                                        Bill , CCCD, Hộ Chiếu Giá 4M6 (Code Xịn Trong Mắt Các Bé Chứ
-                                                        Thật Ra Như Cái ...)</h3>
+                                                            style="padding: 6px;"> Có Phí </span> [MS: #{{ $sourceCodeDetail->id }}]{{ $sourceCodeDetail->name }}
+                                                        </h3>
 
                                                     <div class="row mt-2">
                                                         <div class="col-md-2 col-6">
-                                                            <i class="icofont icofont-eye-alt"></i> Lượt xem: 502
+                                                            <i class="icofont icofont-eye-alt"></i> Lượt xem: {{ $sourceCodeDetail->view_count }}
                                                         </div>
 
                                                         <div class="col-md-2 col-6">
-                                                            <i class="icofont icofont-history"></i> Lượt mua: 124
+                                                            <i class="icofont icofont-history"></i> Lượt mua: {{ $sourceCodeDetail->purchase_count }}
                                                         </div>
                                                     </div>
 
-                                                    <span class="mt-2"> Cập Nhật Gần Nhất Vào: 12/10/2024 -
-                                                        04:51:29</span>
+                                                    <span class="mt-2"> Cập Nhật Gần Nhất Vào: {{ $sourceCodeDetail->updated_at }}
+                                                    </span>
 
                                                     <div class="col-md-12 card card-body text-light mt-3"
                                                         style="background: url(/assets/assets/images/cyberlux/code-arow-background.png);background-size: 100% 100%;">
@@ -90,13 +88,13 @@
 
                                                     <div class="mt-4">
                                                         <span>Giá Công Khai: <strong class="text-danger">
-                                                                0<sup>VND</sup></strong></span>
+                                                                {{ number_format($sourceCodeDetail->price) }}<sup>VND</sup></strong></span>
 
                                                         <div class="row mt-2">
                                                             <div class="col-md-2 col-6">
                                                                 <span class="badge badge-danger text-white"
                                                                     style="width: 100%; padding: 10px; cursor: pointer;"
-                                                                    onclick="window.open('https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg');">
+                                                                    onclick="window.open('{{ $sourceCodeDetail->demo }}');">
                                                                     <i class="icofont icofont-dashboard-web"></i> Xem
                                                                     Demo </span>
                                                             </div>
@@ -126,21 +124,13 @@
 
                                         <div class="mt-3">
                                             <div class="bg-light text-dark" style="border-radius: 8px; padding: 8px;">
-                                                <h5> Tên Mã Nguồn: Code Fake Bill , CCCD, Hộ Chiếu Giá 4M6 (Code Xịn
-                                                    Trong Mắt Các Bé Chứ Thật Ra Như Cái ...)</h5>
-                                                <h5 class="mt-2"> Mã Số: [MS: #11]</h5>
+                                                <h5>{{ $sourceCodeDetail->name }}</h5>
+                                                <h5 class="mt-2"> Mã Số: [MS: #{{ $sourceCodeDetail->id }}]</h5>
                                             </div>
 
                                             <div id="content-gallery" class="mt-3"
                                                 style="border-radius: 8px; padding: 8px;">
-                                                <p>Thu&ecirc; Setup Li&ecirc;n Hệ Ạ</p>
-
-                                                <p>Link
-                                                    SQL:&nbsp;https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view
-                                                </p>
-
-                                                <p>- Kh&ocirc;ng d&ugrave;ng m&atilde; nguồn n&agrave;y cho mục
-                                                    đ&iacute;ch vi phạm ph&aacute;p luật</p>
+                                                {!! $sourceCodeDetail->description !!}
                                             </div>
                                         </div>
                                     </div>
@@ -274,12 +264,12 @@
             anchor.appendChild(img);
 
             img.style.width = "100%";
-            img.style.height = "auto";
-        }
-    });
+                                img.style.height = "auto";
+                            }
+                        });
                     </script>
 
-                    @livewire('content.modal-payment-source-code')
+                    @livewire('content.modal-payment-source-code', ['id' => $sourceCodeDetail->id])
 
                     <script src="/assets/static/payment-code.js" defer></script>
                     @livewire('inc.footer')

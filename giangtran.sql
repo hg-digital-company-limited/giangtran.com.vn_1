@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 18, 2024 lúc 08:21 AM
+-- Thời gian đã tạo: Th12 18, 2024 lúc 12:35 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -161,8 +161,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:2;', 1734502287),
-('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1734502287;', 1734502287);
+('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1734518072),
+('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1734518072;', 1734518072);
 
 -- --------------------------------------------------------
 
@@ -287,7 +287,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (14, '2024_11_19_210118_create_permission_tables', 12),
 (15, '2024_12_06_185329_create_media_table', 13),
 (16, '2024_12_06_185330_add_tenant_aware_column_to_media_table', 13),
-(17, '2024_12_06_192438_create_articles_table', 14);
+(17, '2024_12_06_192438_create_articles_table', 14),
+(18, '2024_12_18_173051_create_source_code_categories_table', 15),
+(19, '2024_12_18_173627_create_source_code_products_table', 16),
+(20, '2024_12_18_174240_create_source_code_orders_table', 17);
 
 -- --------------------------------------------------------
 
@@ -354,8 +357,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4rwiiKhlmDbTgjjuYrffwGiTDwb47A1Fz4eLvzCG', 20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNU40M3RMSVAzM3ZZaU56V0hJUUhjSTVXUk5jTEpUQkhoTlozR1lIUCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIwO30=', 1734501835),
-('MtAaUxfMzLYumdjcXvEGVA51lBmAaPrjftCOie7M', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo4OntzOjM6InVybCI7YTowOnt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvaW52b2ljZS85MDU2OTIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjY6Il90b2tlbiI7czo0MDoiNW55cllhVHdFY091SjYzOXRsVjZjNEIyV1oxN3dISmR2aWZzTzZWcyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ5bFpQUUdUdFM2YTgxTXpaQTRkclJlZXpKVlZ5SEk2VC8xdjZZaGdyeDN2aklHTlM3aS9xUyI7czo4OiJmaWxhbWVudCI7YTowOnt9czo2OiJ0YWJsZXMiO2E6MTp7czoyNjoiTGlzdFNtbUNhdGVnb3JpZXNfcGVyX3BhZ2UiO3M6MjoiNTAiO319', 1734506427);
+('zA8coNO31vocXDQdqTEISt4yTOsdGfr1mq2H2kkm', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiN1VaN3dNT2tmU2duNTRXRTliZ3lRaExqN2pMMjA2MjNCaDRhTWQ4NiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9saXN0LzEiO31zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ5bFpQUUdUdFM2YTgxTXpaQTRkclJlZXpKVlZ5SEk2VC8xdjZZaGdyeDN2aklHTlM3aS9xUyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1734521704);
 
 -- --------------------------------------------------------
 
@@ -604,6 +606,73 @@ INSERT INTO `smm_services` (`id`, `smmcategory_id`, `name`, `price`, `is_active`
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `source_code_categories`
+--
+
+CREATE TABLE `source_code_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `source_code_categories`
+--
+
+INSERT INTO `source_code_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'PHP', '2024-12-18 10:34:04', '2024-12-18 10:34:04');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `source_code_orders`
+--
+
+CREATE TABLE `source_code_orders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `source_code_product_id` bigint(20) UNSIGNED NOT NULL,
+  `unit_price` decimal(10,2) NOT NULL,
+  `payment_method` varchar(255) NOT NULL,
+  `payment_status` varchar(255) NOT NULL,
+  `order_code` varchar(255) NOT NULL,
+  `link_download` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `source_code_products`
+--
+
+CREATE TABLE `source_code_products` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `category_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `demo` varchar(255) DEFAULT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `link_download` varchar(255) DEFAULT NULL,
+  `purchase_count` int(11) NOT NULL DEFAULT 0,
+  `view_count` int(11) NOT NULL DEFAULT 0,
+  `images` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `source_code_products`
+--
+
+INSERT INTO `source_code_products` (`id`, `category_id`, `name`, `description`, `demo`, `price`, `link_download`, `purchase_count`, `view_count`, `images`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Mã Nguồn Smm Panel Siêu Xịn', '<p>&nbsp;Thuê Setup Liên Hệ Ạ</p><p>Link SQL: https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view</p><p>- Không dùng mã nguồn này cho mục đích vi phạm pháp luật&nbsp;</p>', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 100000.00, 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 0, 22, '[{\"image\":\"https:\\/\\/img.upanh.tv\\/2024\\/10\\/12\\/NK6Cnp2.jpg\"}]', '2024-12-18 10:54:14', '2024-12-18 11:35:04');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `transactions`
 --
 
@@ -694,7 +763,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `pa
 (20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '5TPIM7HJbBSnTtoo1Ok9xzO3IatlMzcak9x3afOUHLYU3KcuhLcY5Fcl0fSh', '2024-12-07 02:40:50', '2024-12-13 04:08:54', 'default', NULL, 995351.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
 (21, '2509robloxx', '2509roblox@gmail.comx', '2509robloxx', NULL, '$2y$12$oGWYZv37sgROOHeRHBZKoueExVCXDhOyQw8iU5uY6JfX3hMIxlWcm', NULL, '2024-12-17 14:15:59', '2024-12-17 14:15:59', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
 (22, '2509robloxa', '2509robloxa@gmail.com', '2509robloxa', NULL, '$2y$12$FEN67dl2z5nuGkvKhfIKcO24lCuQTkP.xGMepxjcPYzdBL.T35Qiu', NULL, '2024-12-18 03:18:56', '2024-12-18 03:18:56', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
-(23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'ohs5sINH6LdNHhYDHNieoMC25njLABBt8tC9bfoTJnUKm4QjUq3PENg31OKV', '2024-12-18 03:19:54', '2024-12-18 06:37:45', 'default', NULL, 998935.00, NULL, NULL, NULL, 0.00, 1000000.00, 0, NULL, NULL, NULL);
+(23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'ohs5sINH6LdNHhYDHNieoMC25njLABBt8tC9bfoTJnUKm4QjUq3PENg31OKV', '2024-12-18 03:19:54', '2024-12-18 11:23:44', 'default', NULL, 998935.00, NULL, NULL, NULL, 0.00, 1000000.00, 0, NULL, NULL, NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -796,6 +865,28 @@ ALTER TABLE `smm_services`
   ADD KEY `smm_services_smmcategory_id_foreign` (`smmcategory_id`);
 
 --
+-- Chỉ mục cho bảng `source_code_categories`
+--
+ALTER TABLE `source_code_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `source_code_orders`
+--
+ALTER TABLE `source_code_orders`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `source_code_orders_order_code_unique` (`order_code`),
+  ADD KEY `source_code_orders_user_id_foreign` (`user_id`),
+  ADD KEY `source_code_orders_source_code_product_id_foreign` (`source_code_product_id`);
+
+--
+-- Chỉ mục cho bảng `source_code_products`
+--
+ALTER TABLE `source_code_products`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `source_code_products_category_id_foreign` (`category_id`);
+
+--
 -- Chỉ mục cho bảng `transactions`
 --
 ALTER TABLE `transactions`
@@ -840,7 +931,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `payment_history`
@@ -865,6 +956,24 @@ ALTER TABLE `smm_orders`
 --
 ALTER TABLE `smm_services`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=303;
+
+--
+-- AUTO_INCREMENT cho bảng `source_code_categories`
+--
+ALTER TABLE `source_code_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `source_code_orders`
+--
+ALTER TABLE `source_code_orders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `source_code_products`
+--
+ALTER TABLE `source_code_products`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -900,6 +1009,19 @@ ALTER TABLE `smm_orders`
 --
 ALTER TABLE `smm_services`
   ADD CONSTRAINT `smm_services_smmcategory_id_foreign` FOREIGN KEY (`smmcategory_id`) REFERENCES `smm_categories` (`id`) ON DELETE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `source_code_orders`
+--
+ALTER TABLE `source_code_orders`
+  ADD CONSTRAINT `source_code_orders_source_code_product_id_foreign` FOREIGN KEY (`source_code_product_id`) REFERENCES `source_code_products` (`id`),
+  ADD CONSTRAINT `source_code_orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Các ràng buộc cho bảng `source_code_products`
+--
+ALTER TABLE `source_code_products`
+  ADD CONSTRAINT `source_code_products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `source_code_categories` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
