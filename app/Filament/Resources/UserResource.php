@@ -41,10 +41,6 @@ class UserResource extends Resource
                     ->maxLength(255)
                     ->default(null)
                     ->label('Tên Đăng Nhập'),
-                Forms\Components\Select::make('roles')
-                    ->multiple()
-                    ->relationship('roles', 'name')
-                    ->label('Quyền'),
                 Forms\Components\DateTimePicker::make('email_verified_at')
                     ->label('Thời Gian Xác Thực Email'),
                 Forms\Components\TextInput::make('password')
@@ -53,15 +49,7 @@ class UserResource extends Resource
                     ->dehydrated(fn($state) => filled($state))
                     ->maxLength(255)
                     ->label('Mật Khẩu'),
-                Forms\Components\TextInput::make('theme')
-                    ->maxLength(255)
-                    ->default('default')
-                    ->label('Giao Diện'),
 
-                Forms\Components\TextInput::make('theme_color')
-                    ->maxLength(255)
-                    ->default(null)
-                    ->label('Màu Giao Diện'),
                 Forms\Components\TextInput::make('ip_address')->label('Địa chỉ IP'),
                 Forms\Components\TextInput::make('other_contact_info')->label('Thông tin liên hệ khác'),
                 Forms\Components\TextInput::make('device')->label('Thiết bị'),
@@ -87,8 +75,6 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('email')
                     ->searchable()
                     ->label('Email'),
-                Tables\Columns\BadgeColumn::make('roles.name')
-                    ->label('Quyền'),
                 Tables\Columns\TextColumn::make('username')
                     ->searchable()
                     ->label('Tên Đăng Nhập'),
@@ -118,15 +104,6 @@ class UserResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('theme')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-
-                    ->label('Giao Diện'),
-                Tables\Columns\TextColumn::make('theme_color')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->label('Màu Giao Diện'),
             ])
             ->filters([
                 //
