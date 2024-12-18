@@ -11,7 +11,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(
+            \App\Repositories\User\UserRepositoryInterface::class,
+            \App\Repositories\User\UserEloquentRepository::class
+        );
+        $this->app->singleton(
+            \App\Repositories\Invoice\InvoiceRepositoryInterface::class,
+            \App\Repositories\Invoice\InvoiceEloquentRepository::class
+        );
     }
 
     /**
@@ -19,6 +26,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
     }
 }
