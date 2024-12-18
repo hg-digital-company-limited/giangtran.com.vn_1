@@ -48,7 +48,7 @@
                         <select class="form-control" id="categories" wire:model="selectedCategory">
                             @foreach ($categories as $category)
                                 <option value="{{ $category['id'] }}"
-                                        data-image="{{ Storage::url($category->image) }}">
+                                        data-image="{{ $category->image }}">
                                     {{ $category['name'] }}
                                 </option>
                             @endforeach
@@ -133,7 +133,8 @@
                                 <tr>
                                     <td>Số Lượng:</td>
                                     <td colspan="2" id="discount-show">
-                                        {{ number_format($quantity, 0, '.', '.') }} </td>
+                                        {{ number_format((float)$quantity, 0, '.', '.') }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td> Tổng Thanh Toán (VND) :</td>

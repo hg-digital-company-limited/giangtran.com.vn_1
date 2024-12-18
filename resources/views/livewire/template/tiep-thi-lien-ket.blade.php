@@ -3,7 +3,7 @@
 
 
     <head>
-        <title> Tiếp Thị Liên Kết | HGDIGITAL.VN </title>
+        <title> Tiếp Thị Liên Kết | GIANGTRAN.COM.VN </title>
 
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

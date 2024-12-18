@@ -1,7 +1,7 @@
 <div>
 
     <head>
-        <title> Chi Tiết Dịch Vụ | HGDIGITAL.VN</title>
+        <title> Chi Tiết Dịch Vụ | GIANGTRAN.COM.VN</title>
 
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <link rel="stylesheet" href="/assets/static/style.css?v=2113506158">

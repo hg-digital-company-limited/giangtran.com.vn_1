@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 18, 2024 lúc 04:34 AM
+-- Thời gian đã tạo: Th12 18, 2024 lúc 08:21 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -161,8 +161,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:2;', 1734492324),
-('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1734492324;', 1734492324);
+('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:2;', 1734502287),
+('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1734502287;', 1734502287);
 
 -- --------------------------------------------------------
 
@@ -217,8 +217,8 @@ CREATE TABLE `invoices` (
 --
 
 INSERT INTO `invoices` (`id`, `invoice_code`, `invoice_type`, `service`, `invoice_date`, `amount`, `payment_due_date`, `created_at`, `updated_at`, `user_id`, `payment_status`) VALUES
-(26, '186773', 'Đăng Ký Dịch Vụ', 'TikTok HQ Followers [Refill: 30D] [Max: 1M] [Start Time: 0 - 3 Hrs] [Speed: 50K/D] 💧⛔️♻️', '2024-12-06 03:34:06', 50000.00, '2024-12-06 10:37:06', '2024-12-06 03:34:06', '2024-12-06 03:34:06', 1, 'pending'),
-(29, '611365', 'Đăng Ký Dịch Vụ', 'ˢˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 10 Seconds+ ♻️⛔🔥', '2024-12-17 14:09:58', 228500.00, '2024-12-12 21:30:45', '2024-12-12 14:27:45', '2024-12-17 14:09:58', 20, 'paid');
+(32, '927083', 'Đăng Ký Dịch Vụ', 'ˢˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 3 Seconds+ ♻️⛔🔥', '2024-12-18 07:16:22', 10650.00, '2024-12-18 14:17:49', '2024-12-18 07:14:49', '2024-12-18 07:16:22', 23, 'paid'),
+(33, '905692', 'Đăng Ký Dịch Vụ', 'Facebook Page/Profile Followers | Instant | 20K Per Day | 30 Days Refill ⚡♻️⛔', '2024-12-18 07:20:26', 18280.00, '2024-12-18 14:20:17', '2024-12-18 07:17:17', '2024-12-18 07:20:26', 23, 'paid');
 
 -- --------------------------------------------------------
 
@@ -354,8 +354,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('TlMNuwf5RiHic7DGTXrHApSBNNCsoK9sPCjKnZBy', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjM6InVybCI7YToxOntzOjg6ImludGVuZGVkIjtzOjI3OiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYWRtaW4iO31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJfdG9rZW4iO3M6NDA6Iml0dFBGZnEyd0t6cFZpWE5sWkU3WkFJcnF0bzVnRGtRcXF5aW93Y0EiO30=', 1734492719),
-('ZRTEhZWJJOfXEqqYjgzOsFnFc2Otz6Qk1neVxwxy', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRHdia3FRWU41VXZCNmx4cFBJQmxFa1hLZndFcU9sNmVOSEZHYkNuZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zbW0vY3JlYXRlIjt9fQ==', 1734486927);
+('4rwiiKhlmDbTgjjuYrffwGiTDwb47A1Fz4eLvzCG', 20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNU40M3RMSVAzM3ZZaU56V0hJUUhjSTVXUk5jTEpUQkhoTlozR1lIUCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIwO30=', 1734501835),
+('MtAaUxfMzLYumdjcXvEGVA51lBmAaPrjftCOie7M', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo4OntzOjM6InVybCI7YTowOnt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvaW52b2ljZS85MDU2OTIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjY6Il90b2tlbiI7czo0MDoiNW55cllhVHdFY091SjYzOXRsVjZjNEIyV1oxN3dISmR2aWZzTzZWcyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ5bFpQUUdUdFM2YTgxTXpaQTRkclJlZXpKVlZ5SEk2VC8xdjZZaGdyeDN2aklHTlM3aS9xUyI7czo4OiJmaWxhbWVudCI7YTowOnt9czo2OiJ0YWJsZXMiO2E6MTp7czoyNjoiTGlzdFNtbUNhdGVnb3JpZXNfcGVyX3BhZ2UiO3M6MjoiNTAiO319', 1734506427);
 
 -- --------------------------------------------------------
 
@@ -376,24 +376,24 @@ CREATE TABLE `smm_categories` (
 --
 
 INSERT INTO `smm_categories` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(29, 'Facebook Video/Reel Views', '20', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(30, 'Facebook Followers', '20', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(31, 'Facebook Group Members', '20', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(32, 'Facebook Page Likes', '20', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(33, 'Facebook Post Likes', '20', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(34, 'TikTok Views', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(35, 'TikTok Likes', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(36, 'TikTok Followers', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(37, 'Youtube Likes', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(38, 'Youtube Views', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(39, 'Youtube Subscribers', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(40, 'Instagram Likes', 'media/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(41, 'Instagram Followers', '19', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(42, 'Instagram Saves', '19', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(43, 'Instagram Shares', '19', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(44, 'Telegram Members', '17', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(45, 'Telegram Post Views', '17', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
-(46, 'Telegram Post Reactions', '17', '2024-12-07 08:13:14', '2024-12-07 08:13:14');
+(29, 'Facebook Video/Reel Views', 'https://i.ibb.co/SR8vyHL/0c211cf9-3924-45dd-8b84-ac0af730663c.png', '2024-12-07 08:13:14', '2024-12-18 06:14:46'),
+(30, 'Facebook Followers', 'https://i.ibb.co/SR8vyHL/0c211cf9-3924-45dd-8b84-ac0af730663c.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(31, 'Facebook Group Members', 'https://i.ibb.co/SR8vyHL/0c211cf9-3924-45dd-8b84-ac0af730663c.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(32, 'Facebook Page Likes', 'https://i.ibb.co/SR8vyHL/0c211cf9-3924-45dd-8b84-ac0af730663c.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(33, 'Facebook Post Likes', 'https://i.ibb.co/SR8vyHL/0c211cf9-3924-45dd-8b84-ac0af730663c.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(34, 'TikTok Views', 'https://i.ibb.co/SmgbPgJ/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-18 06:12:52'),
+(35, 'TikTok Likes', 'https://i.ibb.co/SmgbPgJ/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(36, 'TikTok Followers', 'https://i.ibb.co/SmgbPgJ/0dc068cb-842d-499f-8b94-021e6e6bb325.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(37, 'Youtube Likes', 'https://i.ibb.co/3zVqGVr/50e59fe8-07ae-4796-9b6a-67f8c145c425.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(38, 'Youtube Views', 'https://i.ibb.co/3zVqGVr/50e59fe8-07ae-4796-9b6a-67f8c145c425.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(39, 'Youtube Subscribers', 'https://i.ibb.co/3zVqGVr/50e59fe8-07ae-4796-9b6a-67f8c145c425.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(40, 'Instagram Likes', 'https://i.ibb.co/WnBYMGp/70a41ab8-2495-4176-a9b2-d338f298d633.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(41, 'Instagram Followers', 'https://i.ibb.co/WnBYMGp/70a41ab8-2495-4176-a9b2-d338f298d633.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(42, 'Instagram Saves', 'https://i.ibb.co/WnBYMGp/70a41ab8-2495-4176-a9b2-d338f298d633.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(43, 'Instagram Shares', 'https://i.ibb.co/WnBYMGp/70a41ab8-2495-4176-a9b2-d338f298d633.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(44, 'Telegram Members', 'https://i.ibb.co/Nsch5rr/0a007321-1447-42d3-8bd9-13e4c0bd71b0.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(45, 'Telegram Post Views', 'https://i.ibb.co/Nsch5rr/0a007321-1447-42d3-8bd9-13e4c0bd71b0.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14'),
+(46, 'Telegram Post Reactions', 'https://i.ibb.co/Nsch5rr/0a007321-1447-42d3-8bd9-13e4c0bd71b0.png', '2024-12-07 08:13:14', '2024-12-07 08:13:14');
 
 -- --------------------------------------------------------
 
@@ -424,8 +424,8 @@ CREATE TABLE `smm_orders` (
 --
 
 INSERT INTO `smm_orders` (`id`, `user_id`, `smm_service_id`, `quantity`, `total_price`, `status`, `unit_price`, `start_count`, `link`, `remains`, `payment_method`, `payment_status`, `created_at`, `updated_at`, `order_code`) VALUES
-(63, 20, 155, 5000, 10650.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 5000, 'account_balance', 'paid', '2024-12-12 14:23:46', '2024-12-12 14:23:46', '409291'),
-(64, 20, 156, 50000, 228500.00, 'pending', 4.57, 0, 'https://giangtran.com.vn/', 50000, 'bank_transfer', 'pending', '2024-12-12 14:27:45', '2024-12-12 14:27:45', '611365');
+(69, 23, 155, 5000, 10650.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 5000, 'bank_transfer', 'pending', '2024-12-18 07:14:49', '2024-12-18 07:14:49', '927083'),
+(70, 23, 179, 500, 18280.00, 'pending', 36.56, 0, 'https://giangtran.com.vn/', 500, 'bank_transfer', 'pending', '2024-12-18 07:17:17', '2024-12-18 07:17:17', '905692');
 
 -- --------------------------------------------------------
 
@@ -476,130 +476,130 @@ INSERT INTO `smm_services` (`id`, `smmcategory_id`, `name`, `price`, `is_active`
 (176, 29, 'ᶠˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 3 Minutes+ ♻️⛔🔥', 38.08, 1, 'Chưa đủ dữ liệu', 500, 1000000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 31.73),
 (177, 29, 'ᶠˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 6 Minutes+ ♻️⛔🔥', 50.88, 1, 'Chưa đủ dữ liệu', 500, 1000000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 42.40),
 (178, 29, 'ᶠˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 10 Minutes+ ♻️⛔🔥', 79.21, 1, 'Chưa đủ dữ liệu', 500, 1000000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 66.01),
-(179, 30, 'Facebook Page/Profile Followers | Instant | 20K Per Day | 30 Days Refill ⚡♻️⛔', 36.56, 1, '35 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(180, 30, 'Facebook Profile/Page Followers | Instant | 500K Per Day | 7 Days Refill ⚡♻️⛔', 54.84, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
-(181, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 2K Per Day ⚡⛔', 25.89, 1, '22 giờ 34 phút', 50, 20000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(182, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 5K Per Day ⚡⛔', 54.84, 1, '1 giờ 19 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
-(183, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 8K Per Day ⚡⛔', 67.02, 1, '1 giờ 19 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
-(184, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 15K Per Day ⚡⛔', 97.49, 1, '1 giờ 19 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 81.24),
-(185, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 30K Per Day ⚡⛔', 121.86, 1, '1 giờ 19 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
-(186, 31, 'Facebook Group Members | Instant | 200K Per Day | 7 Days Refill ⚡♻️⛔', 41.13, 1, '1 giờ 4 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.27),
-(187, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 2K Per Day ⚡⛔', 15.84, 1, '9 giờ 21 phút', 50, 20000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 13.20),
-(188, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 5K Per Day ⚡⛔', 42.65, 1, 'Chưa đủ dữ liệu', 50, 30000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.54),
-(189, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 10K Per Day ⚡⛔', 67.02, 1, 'Chưa đủ dữ liệu', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
-(190, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 20K Per Day ⚡⛔', 121.86, 1, 'Chưa đủ dữ liệu', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
-(191, 32, 'Facebook Page Likes | Instant | High Quality | 7 Days Refill ⚡♻️⛔', 42.65, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.54),
-(192, 32, 'Facebook Page Likes | Instant | Real Account Slow Delivery ⛔🔥', 60.93, 1, '68 giờ 42 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 50.77),
-(193, 32, 'Facebook Page Likes | Instant | 10K Per Day | 30 Day Refill ⚡♻️⛔', 38.08, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 31.73),
-(194, 32, 'Facebook Page Likes | Instant | 500K Per Day | 7 Days Refill ⚡♻️⛔', 45.70, 1, '24 giờ 45 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
-(195, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 2K Per Day ⚡⛔', 33.51, 1, '105 giờ 13 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 27.93),
-(196, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 5K Per Day ⚡⛔', 54.84, 1, '6 giờ 36 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
-(197, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 10K Per Day ⚡⛔', 67.02, 1, '15 giờ 26 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
-(198, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 20K Per Day ⚡⛔', 121.86, 1, '15 giờ 26 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
-(199, 33, 'Facebook Post Likes | Instant | Real Account Slow Delivery ⛔🔥', 36.56, 1, '65 giờ 51 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(200, 33, 'Facebook Post Likes | Instant | Real Account Medium Delivery ⛔🔥', 54.84, 1, '65 giờ 51 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
-(201, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 👍⛔🔥', 36.56, 1, '65 giờ 51 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(202, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery ❤️⛔🔥', 36.56, 1, '33 giờ 49 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(203, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 🥰⛔🔥', 36.56, 1, '17 giờ 20 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(204, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😆⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(205, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😢⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(206, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😲⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(207, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😡⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(208, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Like 👍', 20.41, 1, '118 giờ 31 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(209, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Love ❤️', 20.41, 1, '158 giờ 22 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(210, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Care 🥰', 20.41, 1, '145 giờ 26 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(211, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Haha 😆', 20.41, 1, '103 giờ 33 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(212, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Sad 😢', 20.41, 1, '81 giờ 58 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(213, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Wow 😲', 20.41, 1, '94 giờ 25 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(214, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Angry 😡', 20.41, 1, '107 giờ 20 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(215, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️', 20.41, 1, '106 giờ 26 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(216, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰', 20.41, 1, '147 giờ 42 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(217, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆', 20.41, 1, '38 giờ 13 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(218, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😲', 20.41, 1, '124 giờ 21 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(219, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😢😲', 20.41, 1, '66 giờ 51 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(220, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😢😲😡', 20.41, 1, '196 giờ 15 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
-(221, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Like 👍', 13.71, 1, '20 giờ 33 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(222, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Love ❤️', 13.71, 1, '27 giờ 33 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(223, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Care 🥰', 13.71, 1, '65 giờ 37 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(224, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Haha 😆', 13.71, 1, '36 giờ 52 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(225, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Sad 😢', 13.71, 1, '42 giờ 26 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(226, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Wow 😲', 13.71, 1, '26 giờ 58 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(227, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Angry 😡', 13.71, 1, '27 giờ 5 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
-(228, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Like 👍', 25.89, 1, '7 giờ 1 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(229, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Love ❤️', 25.89, 1, '17 giờ 17 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(230, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Care 🥰', 25.89, 1, '14 giờ 34 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(231, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Haha 😆', 25.89, 1, '34 giờ 20 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(232, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Sad 😢', 25.89, 1, '37 giờ 49 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(233, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Wow 😲', 25.89, 1, '15 giờ 40 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(234, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Angry 😡', 25.89, 1, '11 giờ 25 phút', 50, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(235, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 10M Per Day ⚡️', 0.01, 1, '1 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.01),
-(236, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 10M Per Day ⚡️', 0.01, 1, '9 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.01),
-(237, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 20M Per Day ⚡️', 0.02, 1, '2 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.02),
-(238, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 50M Per Day ⚡️', 0.02, 1, '3 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.02),
-(239, 34, 'TikTok Views | Instant | VIP Ultra Fast & Stable | 500M Per Day ⚡️', 0.04, 1, '34 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.03),
-(240, 35, 'TikTok Likes | Instant | Ultra Fast & High Quality | 30K Per Day ⚡️', 2.44, 1, 'Chưa đủ dữ liệu', 10, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.03),
-(241, 35, 'TikTok Likes | Instant | 𝗦𝘁𝗮𝗯𝗹𝗲 & 𝗘𝘅𝗰𝗲𝗹𝗹𝗲𝗻𝘁 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 | 10K Per Day | Refill 7 Days ⚡️♻️', 3.05, 1, '1 giờ 19 phút', 10, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.54),
-(242, 35, 'TikTok Likes | Instant | 𝗦𝘁𝗮𝗯𝗹𝗲 & 𝗘𝘅𝗰𝗲𝗹𝗹𝗲𝗻𝘁 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 | 10K Per Day | Refill 30 Days ⚡️♻️', 4.42, 1, '1 giờ 26 phút', 10, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.68),
-(243, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 3 Days ⚡️♻️', 3.96, 1, '8 giờ 6 phút', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.30),
-(244, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 7 Days ⚡️♻️', 4.87, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 4.06),
-(245, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 15 Days ⚡️♻️', 6.09, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 5.08),
-(246, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 30 Days ⚡️♻️', 7.62, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 6.35),
-(247, 35, '🇻🇳 TikTok Likes | Instant | 10K Per Hour | Real & Bot Data ⚡⛔', 9.75, 1, '3 giờ 17 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 8.12),
-(248, 35, '🇻🇳 TikTok Likes | Instant | 20K Per Hour | Real & Bot Data ⚡⛔', 24.37, 1, 'Chưa đủ dữ liệu', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
-(249, 36, 'TikTok Followers | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 50K Per Day | No Refill ⚡⛔', 35.03, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 29.20),
-(250, 36, 'TikTok Followers | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 100K Per Day | No Refill ⚡⛔', 38.08, 1, '6 giờ 50 phút', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 31.73),
-(251, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 7 Days Refill ♻️⚡⛔', 40.82, 1, '31 phút', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.02),
-(252, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 15 Days Refill ♻️⚡⛔', 41.43, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.53),
-(253, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 30 Days Refill ♻️⚡⛔', 42.35, 1, 'Chưa đủ dữ liệu', 10, 100000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.29),
-(254, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 3 Days ⚡️♻️', 30.46, 1, '72 giờ 34 phút', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
-(255, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 7 Days ⚡️♻️', 33.51, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 27.93),
-(256, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 15 Days ⚡️♻️', 39.60, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
-(257, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 30 Days ⚡️♻️', 45.70, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
-(258, 36, '🇻🇳 TikTok Followers | Instant | 5000 Per Day | Real & Bot Data ⚡⛔', 25.89, 1, '272 giờ 38 phút', 50, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(259, 36, '🇻🇳 TikTok Followers | Instant | 10000 Per Day | Real & Bot Data ⚡⛔', 39.60, 1, '70 giờ 3 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
-(260, 37, 'Youtube Bot Likes | Instant | 100K Per Day ⚡🔥', 3.05, 1, '7 phút', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.54),
-(261, 37, 'Youtube Likes | Instant | 100K Per Day | 100% Non Drop | R30 ♻️⚡🔥', 30.46, 1, 'Chưa đủ dữ liệu', 10, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
-(262, 37, 'Youtube Likes | Instant | 100K Per Day | R30 ♻️⚡🔥', 6.09, 1, 'Chưa đủ dữ liệu', 50, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 5.08),
-(263, 37, 'Youtube Likes | Instant | 100K Per Day | R60 ♻️⚡🔥', 9.14, 1, 'Chưa đủ dữ liệu', 50, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 7.62),
-(264, 37, 'Youtube Likes | Instant | 100K Per Day | R90 ♻️⚡🔥', 12.19, 1, 'Chưa đủ dữ liệu', 50, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 10.15),
-(265, 37, 'Youtube Likes | Instant | 100K Per Day | R365 ♻️⚡🔥', 18.27, 1, 'Chưa đủ dữ liệu', 50, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 15.22),
-(266, 37, 'Youtube Likes | Instant | 100K Per Day | 100% Non Drop | AR365 ♻️⚡🔥', 26.08, 1, 'Chưa đủ dữ liệu', 10, 200000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.73),
-(267, 38, 'Youtube Views | Instant | 10K Per Day | Non Drop | Lifetime Guaranteed ♻️', 25.89, 1, '315 giờ 26 phút', 100, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(268, 38, 'Youtube Views | Instant | 100K Per Day | Non Drop | Lifetime Guaranteed ♻️', 39.60, 1, 'Chưa đủ dữ liệu', 10000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
-(269, 38, 'Youtube Views | Instant | 500K Per Day | Non Drop | Lifetime Guaranteed ♻️', 45.70, 1, 'Chưa đủ dữ liệu', 15000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
-(270, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟯𝗞 | Lifetime Guaranteed ♻️', 45.09, 1, 'Chưa đủ dữ liệu', 3000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 37.57),
-(271, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟱𝗞 | Lifetime Guaranteed ♻️', 43.26, 1, 'Chưa đủ dữ liệu', 5000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 36.05),
-(272, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟭𝟬𝗞 | Lifetime Guaranteed ♻️', 31.99, 1, 'Chưa đủ dữ liệu', 10000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 26.66),
-(273, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟮𝟬𝗞 | Lifetime Guaranteed ♻️', 27.42, 1, 'Chưa đủ dữ liệu', 20000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 22.85),
-(274, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟰𝟬𝗞 | Lifetime Guaranteed ♻️', 25.89, 1, 'Chưa đủ dữ liệu', 40000, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
-(275, 39, 'Youtube Subscribers | Instant | 100 Per Day | Non Drop | 30 Days Refill ♻️', 36.56, 1, 'Chưa đủ dữ liệu', 100, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(276, 39, 'Youtube Subscribers | Instant | 200 Per Day | Non Drop | 365 Days Refill ♻️', 76.16, 1, 'Chưa đủ dữ liệu', 100, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 63.47),
-(277, 39, 'Youtube Subscribers | Instant | 500 Per Day | Non Drop | 365 Days Refill ♻️', 91.39, 1, 'Chưa đủ dữ liệu', 100, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 76.16),
-(278, 39, 'Youtube Subscribers | Instant | 800 Per Day | Non Drop | 365 Days Refill ♻️', 106.63, 1, 'Chưa đủ dữ liệu', 100, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 88.86),
-(279, 40, 'Instagram Likes | Instant | Ultra Fast | 50K Per Day ⚡', 0.43, 1, 'Chưa đủ dữ liệu', 10, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.36),
-(280, 40, 'Instagram Likes | Instant | 100K Per Day | 365 Days Refill ⚡♻️⛔', 0.91, 1, '30 phút', 10, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.76),
-(281, 40, 'Instagram Likes | Instant | 3K Per Day | No Refill ⚡⛔', 15.23, 1, '2 giờ 40 phút', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 12.69),
-(282, 40, 'Instagram Likes | Instant | 8K Per Day | No Refill ⚡⛔', 30.46, 1, 'Chưa đủ dữ liệu', 50, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
-(283, 41, 'Instagram Followers | Usually Starts Slowly | 10K Per Day | No Refill ⚡⛔', 24.37, 1, '40 giờ 50 phút', 100, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
-(284, 41, 'Instagram Followers | Usually Starts Slowly | 10K Per Day | No Refill ⚡⛔', 27.42, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 22.85),
-(285, 41, 'Instagram Followers | Instant | 30K Per Day | No Refill ⚡', 46.61, 1, '16 giờ 19 phút', 10, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.84),
-(286, 41, 'Instagram Followers | Instant | 50K Per Day | No Refill ⚡⛔', 52.28, 1, 'Chưa đủ dữ liệu', 10, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 43.57),
-(287, 41, 'Instagram Followers | Instant | 20K Per Day | 365 Days Refill ⚡♻️⛔', 54.84, 1, 'Chưa đủ dữ liệu', 100, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
-(288, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day ⚡⛔', 68.55, 1, '3 giờ 1 phút', 50, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 57.12),
-(289, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R30 ⚡♻️⛔', 89.63, 1, 'Chưa đủ dữ liệu', 50, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 74.69),
-(290, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R60 ⚡♻️⛔', 100.84, 1, 'Chưa đủ dữ liệu', 50, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 84.03),
-(291, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R365 ⚡♻️⛔', 110.26, 1, 'Chưa đủ dữ liệu', 50, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 91.88),
-(292, 42, 'Instagram Saves | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 50K Per Day', 1.52, 1, 'Chưa đủ dữ liệu', 10, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 1.27),
-(293, 43, 'Instagram Shares | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 100K Per Day', 3.66, 1, 'Chưa đủ dữ liệu', 100, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.05),
-(294, 44, 'Telegram Channel/Group Members | 20K Per Day | 30 Day Refill ♻️⛔', 24.37, 1, '2 giờ 39 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
-(295, 44, 'Telegram Channel/Group Members | 20K Per Day | 60 Day Refill ♻️⛔', 30.46, 1, '29 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
-(296, 44, 'Telegram Channel/Group Members | 20K Per Day | 90 Day Refill ♻️⛔', 36.56, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
-(297, 45, 'Telegram Post Views | 100K Per Day', 0.30, 1, '2 giờ 40 phút', 100, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.25),
-(298, 45, 'Telegram Post Views | 200K Per Day', 0.61, 1, 'Chưa đủ dữ liệu', 100, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
-(299, 45, 'Telegram Post Views | 300K Per Day', 0.91, 1, 'Chưa đủ dữ liệu', 100, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.76),
-(300, 46, 'Telegram Positive Reaction | 👍🤩🎉🔥❤️🥰👏🏻 | 2K Per Day', 0.61, 1, '21 giờ 59 phút', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
-(301, 46, 'Telegram Negative Reaction | 👎😢🤮💩🤔🤯🤬 | 2K Per Day', 0.61, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
-(302, 46, 'Telegram Premium Reactions | 💯 😍 ❤️‍🔥 🤡 🕊 🐳 | 2K Per Day', 4.57, 1, 'Chưa đủ dữ liệu', 100, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.81);
+(179, 30, 'Facebook Page/Profile Followers | Instant | 20K Per Day | 30 Days Refill ⚡♻️⛔', 36.56, 1, '35 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(180, 30, 'Facebook Profile/Page Followers | Instant | 500K Per Day | 7 Days Refill ⚡♻️⛔', 54.84, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
+(181, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 2K Per Day ⚡⛔', 25.89, 1, '22 giờ 34 phút', 500, 20000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(182, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 5K Per Day ⚡⛔', 54.84, 1, '1 giờ 19 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
+(183, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 8K Per Day ⚡⛔', 67.02, 1, '1 giờ 19 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
+(184, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 15K Per Day ⚡⛔', 97.49, 1, '1 giờ 19 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 81.24),
+(185, 30, 'Facebook Followers | Instant | 100% Real Data & Old Data | 30K Per Day ⚡⛔', 121.86, 1, '1 giờ 19 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
+(186, 31, 'Facebook Group Members | Instant | 200K Per Day | 7 Days Refill ⚡♻️⛔', 41.13, 1, '1 giờ 4 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.27),
+(187, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 2K Per Day ⚡⛔', 15.84, 1, '9 giờ 21 phút', 500, 20000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 13.20),
+(188, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 5K Per Day ⚡⛔', 42.65, 1, 'Chưa đủ dữ liệu', 500, 30000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.54),
+(189, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 10K Per Day ⚡⛔', 67.02, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
+(190, 31, 'Facebook Group Members | Instant | 100% Real & Old Data | 20K Per Day ⚡⛔', 121.86, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
+(191, 32, 'Facebook Page Likes | Instant | High Quality | 7 Days Refill ⚡♻️⛔', 42.65, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.54),
+(192, 32, 'Facebook Page Likes | Instant | Real Account Slow Delivery ⛔🔥', 60.93, 1, '68 giờ 42 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 50.77),
+(193, 32, 'Facebook Page Likes | Instant | 10K Per Day | 30 Day Refill ⚡♻️⛔', 38.08, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 31.73),
+(194, 32, 'Facebook Page Likes | Instant | 500K Per Day | 7 Days Refill ⚡♻️⛔', 45.70, 1, '24 giờ 45 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
+(195, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 2K Per Day ⚡⛔', 33.51, 1, '105 giờ 13 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 27.93),
+(196, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 5K Per Day ⚡⛔', 54.84, 1, '6 giờ 36 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
+(197, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 10K Per Day ⚡⛔', 67.02, 1, '15 giờ 26 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 55.85),
+(198, 32, 'Facebook Page Likes | Instant | 100% Real & Old Data | 20K Per Day ⚡⛔', 121.86, 1, '15 giờ 26 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 101.55),
+(199, 33, 'Facebook Post Likes | Instant | Real Account Slow Delivery ⛔🔥', 36.56, 1, '65 giờ 51 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(200, 33, 'Facebook Post Likes | Instant | Real Account Medium Delivery ⛔🔥', 54.84, 1, '65 giờ 51 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
+(201, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 👍⛔🔥', 36.56, 1, '65 giờ 51 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(202, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery ❤️⛔🔥', 36.56, 1, '33 giờ 49 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(203, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 🥰⛔🔥', 36.56, 1, '17 giờ 20 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(204, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😆⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(205, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😢⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(206, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😲⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(207, 33, 'Facebook Post Reactions | Instant | Real Account Slow Delivery 😡⛔🔥', 36.56, 1, 'Chưa đủ dữ liệu', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(208, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Like 👍', 20.41, 1, '118 giờ 31 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(209, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Love ❤️', 20.41, 1, '158 giờ 22 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(210, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Care 🥰', 20.41, 1, '145 giờ 26 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(211, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Haha 😆', 20.41, 1, '103 giờ 33 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(212, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Sad 😢', 20.41, 1, '81 giờ 58 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(213, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Wow 😲', 20.41, 1, '94 giờ 25 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(214, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | Angry 😡', 20.41, 1, '107 giờ 20 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(215, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️', 20.41, 1, '106 giờ 26 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(216, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰', 20.41, 1, '147 giờ 42 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(217, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆', 20.41, 1, '38 giờ 13 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(218, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😲', 20.41, 1, '124 giờ 21 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(219, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😢😲', 20.41, 1, '66 giờ 51 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(220, 33, 'Facebook Post Reactions | Instant | 100% Bot Data & Old Data | 👍❤️🥰😆😢😲😡', 20.41, 1, '196 giờ 15 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 17.01),
+(221, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Like 👍', 13.71, 1, '20 giờ 33 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(222, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Love ❤️', 13.71, 1, '27 giờ 33 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(223, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Care 🥰', 13.71, 1, '65 giờ 37 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(224, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Haha 😆', 13.71, 1, '36 giờ 52 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(225, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Sad 😢', 13.71, 1, '42 giờ 26 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(226, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Wow 😲', 13.71, 1, '26 giờ 58 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(227, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Angry 😡', 13.71, 1, '27 giờ 5 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 11.42),
+(228, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Like 👍', 25.89, 1, '7 giờ 1 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(229, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Love ❤️', 25.89, 1, '17 giờ 17 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(230, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Care 🥰', 25.89, 1, '14 giờ 34 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(231, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Haha 😆', 25.89, 1, '34 giờ 20 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(232, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Sad 😢', 25.89, 1, '37 giờ 49 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(233, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Wow 😲', 25.89, 1, '15 giờ 40 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(234, 33, 'Facebook Post Reactions | Instant | 100% Real Data & Old Data | Angry 😡', 25.89, 1, '11 giờ 25 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(235, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 10M Per Day ⚡️', 0.01, 1, '1 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.01),
+(236, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 10M Per Day ⚡️', 0.01, 1, '9 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.01),
+(237, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 20M Per Day ⚡️', 0.02, 1, '2 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.02),
+(238, 34, 'TikTok Views | Instant | Ultra Fast & Stable | 50M Per Day ⚡️', 0.02, 1, '3 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.02),
+(239, 34, 'TikTok Views | Instant | VIP Ultra Fast & Stable | 500M Per Day ⚡️', 0.04, 1, '34 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.03),
+(240, 35, 'TikTok Likes | Instant | Ultra Fast & High Quality | 30K Per Day ⚡️', 2.44, 1, 'Chưa đủ dữ liệu', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.03),
+(241, 35, 'TikTok Likes | Instant | 𝗦𝘁𝗮𝗯𝗹𝗲 & 𝗘𝘅𝗰𝗲𝗹𝗹𝗲𝗻𝘁 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 | 10K Per Day | Refill 7 Days ⚡️♻️', 3.05, 1, '1 giờ 19 phút', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.54),
+(242, 35, 'TikTok Likes | Instant | 𝗦𝘁𝗮𝗯𝗹𝗲 & 𝗘𝘅𝗰𝗲𝗹𝗹𝗲𝗻𝘁 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 | 10K Per Day | Refill 30 Days ⚡️♻️', 4.42, 1, '1 giờ 26 phút', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.68),
+(243, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 3 Days ⚡️♻️', 3.96, 1, '8 giờ 6 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.30),
+(244, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 7 Days ⚡️♻️', 4.87, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 4.06),
+(245, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 15 Days ⚡️♻️', 6.09, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 5.08),
+(246, 35, 'TikTok Likes | Instant | Brazil 🇧🇷 | 50K Per Day | Refill 30 Days ⚡️♻️', 7.62, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 6.35),
+(247, 35, '🇻🇳 TikTok Likes | Instant | 10K Per Hour | Real & Bot Data ⚡⛔', 9.75, 1, '3 giờ 17 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 8.12),
+(248, 35, '🇻🇳 TikTok Likes | Instant | 20K Per Hour | Real & Bot Data ⚡⛔', 24.37, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
+(249, 36, 'TikTok Followers | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 50K Per Day | No Refill ⚡⛔', 35.03, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 29.20),
+(250, 36, 'TikTok Followers | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 100K Per Day | No Refill ⚡⛔', 38.08, 1, '6 giờ 50 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 31.73),
+(251, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 7 Days Refill ♻️⚡⛔', 40.82, 1, '31 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.02),
+(252, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 15 Days Refill ♻️⚡⛔', 41.43, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 34.53),
+(253, 36, 'TikTok Followers | Instant | 𝗩𝗜𝗣 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 300K Per Day | 30 Days Refill ♻️⚡⛔', 42.35, 1, 'Chưa đủ dữ liệu', 500, 100000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 35.29),
+(254, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 3 Days ⚡️♻️', 30.46, 1, '72 giờ 34 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
+(255, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 7 Days ⚡️♻️', 33.51, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 27.93),
+(256, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 15 Days ⚡️♻️', 39.60, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
+(257, 36, 'TikTok Followers | Instant | Brazil 🇧🇷 | 20K Per Day | Refill 30 Days ⚡️♻️', 45.70, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
+(258, 36, '🇻🇳 TikTok Followers | Instant | 5000 Per Day | Real & Bot Data ⚡⛔', 25.89, 1, '272 giờ 38 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(259, 36, '🇻🇳 TikTok Followers | Instant | 10000 Per Day | Real & Bot Data ⚡⛔', 39.60, 1, '70 giờ 3 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
+(260, 37, 'Youtube Bot Likes | Instant | 100K Per Day ⚡🔥', 3.05, 1, '7 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 2.54),
+(261, 37, 'Youtube Likes | Instant | 100K Per Day | 100% Non Drop | R30 ♻️⚡🔥', 30.46, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
+(262, 37, 'Youtube Likes | Instant | 100K Per Day | R30 ♻️⚡🔥', 6.09, 1, 'Chưa đủ dữ liệu', 500, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 5.08),
+(263, 37, 'Youtube Likes | Instant | 100K Per Day | R60 ♻️⚡🔥', 9.14, 1, 'Chưa đủ dữ liệu', 500, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 7.62),
+(264, 37, 'Youtube Likes | Instant | 100K Per Day | R90 ♻️⚡🔥', 12.19, 1, 'Chưa đủ dữ liệu', 500, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 10.15),
+(265, 37, 'Youtube Likes | Instant | 100K Per Day | R365 ♻️⚡🔥', 18.27, 1, 'Chưa đủ dữ liệu', 500, 25000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 15.22),
+(266, 37, 'Youtube Likes | Instant | 100K Per Day | 100% Non Drop | AR365 ♻️⚡🔥', 26.08, 1, 'Chưa đủ dữ liệu', 500, 200000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.73),
+(267, 38, 'Youtube Views | Instant | 10K Per Day | Non Drop | Lifetime Guaranteed ♻️', 25.89, 1, '315 giờ 26 phút', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(268, 38, 'Youtube Views | Instant | 100K Per Day | Non Drop | Lifetime Guaranteed ♻️', 39.60, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 33.00),
+(269, 38, 'Youtube Views | Instant | 500K Per Day | Non Drop | Lifetime Guaranteed ♻️', 45.70, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.08),
+(270, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟯𝗞 | Lifetime Guaranteed ♻️', 45.09, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 37.57),
+(271, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟱𝗞 | Lifetime Guaranteed ♻️', 43.26, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 36.05),
+(272, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟭𝟬𝗞 | Lifetime Guaranteed ♻️', 31.99, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 26.66),
+(273, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟮𝟬𝗞 | Lifetime Guaranteed ♻️', 27.42, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 22.85),
+(274, 38, 'YouTube Views | Native ADS | Real Users | 500K Per Day | 𝗠𝗶𝗻 𝟰𝟬𝗞 | Lifetime Guaranteed ♻️', 25.89, 1, 'Chưa đủ dữ liệu', 500, 10000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 21.58),
+(275, 39, 'Youtube Subscribers | Instant | 100 Per Day | Non Drop | 30 Days Refill ♻️', 36.56, 1, 'Chưa đủ dữ liệu', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(276, 39, 'Youtube Subscribers | Instant | 200 Per Day | Non Drop | 365 Days Refill ♻️', 76.16, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 63.47),
+(277, 39, 'Youtube Subscribers | Instant | 500 Per Day | Non Drop | 365 Days Refill ♻️', 91.39, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 76.16),
+(278, 39, 'Youtube Subscribers | Instant | 800 Per Day | Non Drop | 365 Days Refill ♻️', 106.63, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 88.86),
+(279, 40, 'Instagram Likes | Instant | Ultra Fast | 50K Per Day ⚡', 0.43, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.36),
+(280, 40, 'Instagram Likes | Instant | 100K Per Day | 365 Days Refill ⚡♻️⛔', 0.91, 1, '30 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.76),
+(281, 40, 'Instagram Likes | Instant | 3K Per Day | No Refill ⚡⛔', 15.23, 1, '2 giờ 40 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 12.69),
+(282, 40, 'Instagram Likes | Instant | 8K Per Day | No Refill ⚡⛔', 30.46, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
+(283, 41, 'Instagram Followers | Usually Starts Slowly | 10K Per Day | No Refill ⚡⛔', 24.37, 1, '40 giờ 50 phút', 500, 10000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
+(284, 41, 'Instagram Followers | Usually Starts Slowly | 10K Per Day | No Refill ⚡⛔', 27.42, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 22.85),
+(285, 41, 'Instagram Followers | Instant | 30K Per Day | No Refill ⚡', 46.61, 1, '16 giờ 19 phút', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 38.84),
+(286, 41, 'Instagram Followers | Instant | 50K Per Day | No Refill ⚡⛔', 52.28, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 43.57),
+(287, 41, 'Instagram Followers | Instant | 20K Per Day | 365 Days Refill ⚡♻️⛔', 54.84, 1, 'Chưa đủ dữ liệu', 500, 100000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 45.70),
+(288, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day ⚡⛔', 68.55, 1, '3 giờ 1 phút', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 57.12),
+(289, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R30 ⚡♻️⛔', 89.63, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 74.69),
+(290, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R60 ⚡♻️⛔', 100.84, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 84.03),
+(291, 41, 'Instagram Followers Indian 🇮🇳 | Instant | 200K Per Day | R365 ⚡♻️⛔', 110.26, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 91.88),
+(292, 42, 'Instagram Saves | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 50K Per Day', 1.52, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 1.27),
+(293, 43, 'Instagram Shares | Instant | 𝗨𝗹𝘁𝗿𝗮 𝗙𝗮𝘀𝘁 & 𝗦𝘁𝗮𝗯𝗹𝗲 | 100K Per Day', 3.66, 1, 'Chưa đủ dữ liệu', 500, 1000000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.05),
+(294, 44, 'Telegram Channel/Group Members | 20K Per Day | 30 Day Refill ♻️⛔', 24.37, 1, '2 giờ 39 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 20.31),
+(295, 44, 'Telegram Channel/Group Members | 20K Per Day | 60 Day Refill ♻️⛔', 30.46, 1, '29 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 25.39),
+(296, 44, 'Telegram Channel/Group Members | 20K Per Day | 90 Day Refill ♻️⛔', 36.56, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 30.46),
+(297, 45, 'Telegram Post Views | 100K Per Day', 0.30, 1, '2 giờ 40 phút', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.25),
+(298, 45, 'Telegram Post Views | 200K Per Day', 0.61, 1, 'Chưa đủ dữ liệu', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
+(299, 45, 'Telegram Post Views | 300K Per Day', 0.91, 1, 'Chưa đủ dữ liệu', 500, 500000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.76),
+(300, 46, 'Telegram Positive Reaction | 👍🤩🎉🔥❤️🥰👏🏻 | 2K Per Day', 0.61, 1, '21 giờ 59 phút', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
+(301, 46, 'Telegram Negative Reaction | 👎😢🤮💩🤔🤯🤬 | 2K Per Day', 0.61, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 0.51),
+(302, 46, 'Telegram Premium Reactions | 💯 😍 ❤️‍🔥 🤡 🕊 🐳 | 2K Per Day', 4.57, 1, 'Chưa đủ dữ liệu', 500, 50000, '2024-12-12 14:19:26', '2024-12-12 14:19:26', 3.81);
 
 -- --------------------------------------------------------
 
@@ -645,7 +645,16 @@ INSERT INTO `transactions` (`id`, `bank_brand_name`, `account_number`, `transact
 ('5489694', 'MBBank', '0966579217', '2024-12-17 12:02:00', 0.00, 10000.00, 0.00, 'INVJBJKI2US   Ma giao dich  Trace124745 Trace 124745 NG CHUYEN:CUSTOMER 0966579217', 'FT24352280244040', NULL, NULL, '5090', '2024-12-17 14:04:11', '2024-12-17 14:04:11'),
 ('5489714', 'MBBank', '0966579217', '2024-12-17 12:02:00', 10000.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCIiRUrPAGx-74218418836 NG CHUYEN:TRAN LE HOANG GIANG', 'FT24352507513709', NULL, NULL, '5090', '2024-12-17 14:04:11', '2024-12-17 14:04:11'),
 ('5504548', 'MBBank', '0966579217', '2024-12-17 21:04:11', 228500.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCIhjFmPvUM-74259096007', 'FT24352280504706', NULL, NULL, '5090', '2024-12-17 14:04:57', '2024-12-17 14:04:57'),
-('5504551', 'MBBank', '0966579217', '2024-12-17 21:04:13', 0.00, 228500.00, 0.00, '74260616060-611365-CHUYEN TIEN-OQCH39373634-MOMO74260616060MOMO', 'FT24352490207898', NULL, NULL, '5090', '2024-12-17 14:04:57', '2024-12-17 14:04:57');
+('5504551', 'MBBank', '0966579217', '2024-12-17 21:04:13', 0.00, 228500.00, 0.00, '74260616060-611365-CHUYEN TIEN-OQCH39373634-MOMO74260616060MOMO', 'FT24352490207898', NULL, NULL, '5090', '2024-12-17 14:04:57', '2024-12-17 14:04:57'),
+('5517528', 'MBBank', '0966579217', '2024-12-18 10:03:04', 0.00, 200000.00, 0.00, 'Chuyen tien thanh toan   Ma giao dich  Trace133647 Trace 133647', 'FT24353071016789', NULL, NULL, '5090', '2024-12-18 07:03:29', '2024-12-18 07:03:29'),
+('5518711', 'MBBank', '0966579217', '2024-12-18 11:11:52', 250800.00, 0.00, 0.00, 'QRCODE VNPAY QRCODE 096657921724121811112289851 BP0001b5bch3', 'FT24353349694852', NULL, NULL, '5090', '2024-12-18 07:03:29', '2024-12-18 07:03:29'),
+('5520764', 'MBBank', '0966579217', '2024-12-18 14:04:49', 10000.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCICyzGDIkp-74306357302', 'FT24353306116978', NULL, NULL, '5090', '2024-12-18 07:05:57', '2024-12-18 07:05:57'),
+('5520863', 'MBBank', '0966579217', '2024-12-18 14:10:31', 10650.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCIuQbATQGJ-74307599342', 'FT24353150604760', NULL, NULL, '5090', '2024-12-18 07:11:17', '2024-12-18 07:11:17'),
+('5520864', 'MBBank', '0966579217', '2024-12-18 14:10:34', 0.00, 10650.00, 0.00, '74308598282-155641-CHUYEN TIEN-OQCH39548853-MOMO74308598282MOMO', 'FT24353526298135', NULL, NULL, '5090', '2024-12-18 07:11:19', '2024-12-18 07:11:19'),
+('5520934', 'MBBank', '0966579217', '2024-12-18 14:15:33', 10650.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCIctPVCftp-74307602378', 'FT24353698318044', NULL, NULL, '5090', '2024-12-18 07:16:17', '2024-12-18 07:16:17'),
+('5520936', 'MBBank', '0966579217', '2024-12-18 14:15:35', 0.00, 10650.00, 0.00, '74309033193-927083-CHUYEN TIEN-OQCH39549957-MOMO74309033193MOMO', 'FT24353547661926', NULL, NULL, '5090', '2024-12-18 07:16:22', '2024-12-18 07:16:22'),
+('5520957', 'MBBank', '0966579217', '2024-12-18 14:16:52', 18280.00, 0.00, 0.00, 'MOMO-CASHIN-0966579217-OQCIzrekhETm-74307454213', 'FT24353008086641', NULL, NULL, '5090', '2024-12-18 07:17:38', '2024-12-18 07:17:38'),
+('5520958', 'MBBank', '0966579217', '2024-12-18 14:16:55', 0.00, 18280.00, 0.00, '74309122490-905692-CHUYEN TIEN-OQCH39550278-MOMO74309122490MOMO', 'FT24353438100861', NULL, NULL, '5090', '2024-12-18 07:17:38', '2024-12-18 07:17:38');
 
 -- --------------------------------------------------------
 
@@ -682,10 +691,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `theme`, `theme_color`, `balance`, `ip_address`, `other_contact_info`, `device`, `total_consumption`, `total_deposit`, `two_factor_auth_status`, `avatar`, `contact`, `otp`) VALUES
-(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '2htK7PnSV4lbzU590u21T0LFH44ZeaBSKgm4UxuJPyw0q8cGiqmAltnSU7vB', '2024-12-07 02:40:50', '2024-12-13 04:08:54', 'default', NULL, 995351.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
+(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '5TPIM7HJbBSnTtoo1Ok9xzO3IatlMzcak9x3afOUHLYU3KcuhLcY5Fcl0fSh', '2024-12-07 02:40:50', '2024-12-13 04:08:54', 'default', NULL, 995351.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
 (21, '2509robloxx', '2509roblox@gmail.comx', '2509robloxx', NULL, '$2y$12$oGWYZv37sgROOHeRHBZKoueExVCXDhOyQw8iU5uY6JfX3hMIxlWcm', NULL, '2024-12-17 14:15:59', '2024-12-17 14:15:59', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
 (22, '2509robloxa', '2509robloxa@gmail.com', '2509robloxa', NULL, '$2y$12$FEN67dl2z5nuGkvKhfIKcO24lCuQTkP.xGMepxjcPYzdBL.T35Qiu', NULL, '2024-12-18 03:18:56', '2024-12-18 03:18:56', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
-(23, 'admin@gmail.com', 'admin@gmail.com', NULL, NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', NULL, '2024-12-18 03:19:54', '2024-12-18 03:19:54', 'default', NULL, 0.00, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
+(23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'ohs5sINH6LdNHhYDHNieoMC25njLABBt8tC9bfoTJnUKm4QjUq3PENg31OKV', '2024-12-18 03:19:54', '2024-12-18 06:37:45', 'default', NULL, 998935.00, NULL, NULL, NULL, 0.00, 1000000.00, 0, NULL, NULL, NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -819,7 +828,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT cho bảng `jobs`
@@ -849,7 +858,7 @@ ALTER TABLE `smm_categories`
 -- AUTO_INCREMENT cho bảng `smm_orders`
 --
 ALTER TABLE `smm_orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT cho bảng `smm_services`

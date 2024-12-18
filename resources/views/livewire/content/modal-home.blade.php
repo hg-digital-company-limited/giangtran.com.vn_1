@@ -13,7 +13,7 @@ aria-labelledby="exampleModalCenter1" aria-hidden="true">
                 <br>
                 <p class="mt-3">
                 <p style="text-align:center"><span style="color:#c0392b"><strong>Ch&agrave;o
-                            Mừng Đến Với HgDigital.Vn</strong></span></p>
+                            Mừng Đến Với GIANGTRAN.COM.VN</strong></span></p>
                 {{-- <p style="text-align:center">
 
                     <strong>Giới Thiệu Bạn B&egrave;, Kh&aacute;ch

@@ -1,7 +1,7 @@
 <div>
 
 <head>
-    <title>API Client | HGDIGITAL.VN</title>
+    <title>API Client | GIANGTRAN.COM.VN</title>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

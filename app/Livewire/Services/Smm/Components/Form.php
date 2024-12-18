@@ -6,6 +6,8 @@ use App\Models\Invoice;
 use App\Models\SmmCategory;
 use App\Models\SmmOrder;
 use App\Models\SmmService;
+use App\Repositories\Invoice\InvoiceRepositoryInterface;
+use App\Repositories\SmmOrder\SmmOrderRepositoryInterface;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +21,13 @@ class Form extends Component
     public $selectedCategory, $categories, $services, $selectedCategory_path, $quantity, $link, $image, $paymentMethod; // Danh sách danh mục
     public $selectedService, $selectedServicePrice, $selectedServiceMin, $selectedServiceMax, $selectedServiceTime;
     public $errors = [];
-    public function mount()
+    protected $invoiceRepository;
+    protected $smmOrderRepository;
+    public function mount(InvoiceRepositoryInterface $invoiceRepository, SmmOrderRepositoryInterface $smmOrderRepository)
     {
+        $this->invoiceRepository = $invoiceRepository;
+        $this->smmOrderRepository = $smmOrderRepository;
+
         $this->balance = Auth::user()->balance ?? 0;
         $this->categories = SmmCategory::get();
         if ($this->categories->isNotEmpty()) {
@@ -81,8 +88,14 @@ class Form extends Component
         $this->dispatch('select2:updated');
     }
 
-    public function submitOrder() // Hàm submit đơn hàng
+    public function submitOrder(SmmOrderRepositoryInterface $smmOrderRepository) // Hàm submit đơn hàng
     {
+        $this->smmOrderRepository = $smmOrderRepository;
+
+        $totalPrice = $this->getServicePrice($this->selectedService) * $this->quantity;
+
+        // Get user's balance
+        $userBalance = auth()->user()->balance; // Assuming 'bala
         // Reset errors before processing
         $this->errors = [];
 
@@ -107,7 +120,9 @@ class Form extends Component
         if (empty($this->link)) {
             $this->errors['link'] = 'Vui lòng nhập link.';
         }
-
+        if ($this->paymentMethod == 'bank_transfer' && $totalPrice < 10000) {
+            $this->errors['paymentMethod'] = 'Số tiền tối thiểu Chuyển Khoản Ngân Hàng là 10.000 VNĐ.';
+        }
         // If there are errors, alert the user and return
         if (!empty($this->errors)) {
             foreach ($this->errors as $error) {
@@ -117,12 +132,6 @@ class Form extends Component
 
             return;
         }
-        // Calculate total price
-
-        $totalPrice = $this->getServicePrice($this->selectedService) * $this->quantity;
-
-        // Get user's balance
-        $userBalance = auth()->user()->balance; // Assuming 'balance' is a field in the User model
 
         // Check if user has sufficient balance
         if ($this->paymentMethod == 'account_balance') {
@@ -132,9 +141,9 @@ class Form extends Component
                 return;
             }
         }
-
         // Check for unpaid invoices
-        if (Invoice::hasUnpaidInvoices()) {
+        $this->invoiceRepository = app(InvoiceRepositoryInterface::class);
+        if ($this->invoiceRepository->hasUnpaidInvoices()) {
             $this->dispatch('showModalAlert', [
                 'title' => 'Thông báo',
                 'message' => 'Bạn có hóa đơn chưa thanh toán, vui lòng thanh toán hóa đơn trước khi tạo đơn hàng mới',
@@ -157,7 +166,8 @@ class Form extends Component
             'payment_method' => $this->paymentMethod,
         ];
         // Create the order
-        $order = SmmOrder::createOrder($data);
+
+        $order = $this->smmOrderRepository->createOrder($data);
         if ($order['status']) {
             // Reset form fields after successful order creation
 

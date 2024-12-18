@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Invoice\InvoiceRepositoryInterface::class,
             \App\Repositories\Invoice\InvoiceEloquentRepository::class
         );
+        $this->app->singleton(
+            \App\Repositories\SmmOrder\SmmOrderRepositoryInterface::class,
+            \App\Repositories\SmmOrder\SmmOrderEloquentRepository::class
+        );
     }
 
     /**

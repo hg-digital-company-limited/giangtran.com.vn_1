@@ -53,8 +53,9 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('ip_address')->label('Địa chỉ IP'),
                 Forms\Components\TextInput::make('other_contact_info')->label('Thông tin liên hệ khác'),
                 Forms\Components\TextInput::make('device')->label('Thiết bị'),
-                Forms\Components\TextInput::make('total_consumption')->numeric()->default(0)->label('Tổng tiêu thụ'),
-                Forms\Components\TextInput::make('total_deposit')->numeric()->default(0)->label('Tổng gửi'),
+                Forms\Components\TextInput::make('balance')->numeric()->default(0)->label('Số Dư'),
+                Forms\Components\TextInput::make('total_consumption')->numeric()->default(0)->label('Đã Dùng'),
+                Forms\Components\TextInput::make('total_deposit')->numeric()->default(0)->label('Tổng Nạp'),
                 Forms\Components\Toggle::make('two_factor_auth_status')->default(false)->label('Trạng thái 2FA'),
             ]);
     }
