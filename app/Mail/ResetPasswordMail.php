@@ -22,7 +22,7 @@ class ResetPasswordMail extends Mailable
     {
         $this->token = $token;
         $this->email = $email;
-        $this->from('2508roblox@gmail.com', 'HG Digital');
+        $this->from('2508roblox@gmail.com', 'GIANGTRAN.COM.VN');
 
     }
 
