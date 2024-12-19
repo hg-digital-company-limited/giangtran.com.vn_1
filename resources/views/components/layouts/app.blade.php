@@ -110,9 +110,7 @@
 </head>
 
 <body>
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="/logo/icon.png" alt="AdminLTELogo" height="60" width="60">
-    </div>
+
     {{ $slot }}
 
     @livewireScripts
@@ -162,18 +160,18 @@
 @livewire('content.modal-logout')
 
 <script>
-    window.addEventListener('load', function() {
-          setTimeout(function () {
+     setTimeout(function() {
                 var $preloader = document.querySelector('.preloader');
                 var $animation__shake = document.querySelector('.animation__shake');
 
                 if ($preloader) {
-                  $preloader.style.height = '0';
-                  setTimeout(function () {
-                    $animation__shake.style.display = 'none';
-                  }, 200);
+                    $preloader.style.height = '0';
+                    setTimeout(function() {
+                        if ($animation__shake) {
+                            $animation__shake.style.display = 'none';
+                        }
+                    }, 200);
                 }
-            }, 200);
-        });
-    </script>
+            }, 800);
+</script>
 </html>

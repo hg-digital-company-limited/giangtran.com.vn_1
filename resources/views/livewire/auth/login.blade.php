@@ -4,11 +4,8 @@
         <title>Đăng Nhập Tài Khoản - GIANGTRAN.COM.VN</title>
     </head>
     <body id="content">
-        <div class="loader-wrapper" style="z-index: 999999;">
-            <div class="preloader-wrap">
-                <img src="/logo/giangtran.com.vn.dark.webp" alt="logo" class="img-fluid" style="width: 150px;">
-                <div class="loading-bar"></div>
-            </div>
+          <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="/logo/icon.png" alt="AdminLTELogo" height="60" width="60">
         </div>
         <div>
             <div class="tap-top"><i data-feather="chevrons-up"></i></div>
