@@ -22,6 +22,6 @@ class SourceCodeOrderEloquentRepository extends EloquentRepository implements So
     }
     public function getAllByUser($userId)
     {
-        return $this->_model->where('user_id', $userId)->get();
+        return $this->_model->where('user_id', $userId)->orderBy('created_at', 'desc')->get();
     }
 }

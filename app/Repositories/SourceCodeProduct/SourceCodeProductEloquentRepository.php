@@ -21,4 +21,10 @@ class SourceCodeProductEloquentRepository extends EloquentRepository implements 
     {
         return $this->_model->find($id);
     }
+    public function updateSourceCodeProductPurchaseCount($id)
+    {
+        $sourceCodeProduct = $this->_model->find($id);
+        $sourceCodeProduct->purchase_count += 1;
+        $sourceCodeProduct->save();
+    }
 }

@@ -9,4 +9,6 @@ interface UserRepositoryInterface extends RepositoryInterface
     public function createUser(array $data);
     public function getCurrentUserBalance();
     public function getCurrentUserName();
+    public function deductBalance($userId, $amount);
+    public function addBalance($userId, $amount);
 }

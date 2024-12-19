@@ -60,4 +60,19 @@ class UserEloquentRepository extends EloquentRepository implements UserRepositor
         // Kiểm tra xem người dùng có tồn tại không
         return $user ? $user->name : 'Khách';
     }
+    public function deductBalance($userId, $amount)
+    {
+        $user = $this->_model::find($userId);
+        $user->balance -= $amount;
+        $user->total_consumption += $amount;
+        $user->save();
+    }
+    public function addBalance($userId, $amount)
+    {
+        $user = $this->_model::find($userId);
+        $user->balance += $amount;
+        $user->total_consumption += $amount;
+        $user->save();
+    }
+
 }
