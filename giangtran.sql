@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 18, 2024 lúc 12:35 PM
+-- Thời gian đã tạo: Th12 19, 2024 lúc 12:03 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -142,7 +142,8 @@ INSERT INTO `activity_history` (`id`, `user_id`, `content`, `ip_address`, `creat
 (2336, 20, 'Đăng nhập thành công với OTP', '127.0.0.1', '2024-12-13 02:52:35', '2024-12-13 02:52:35'),
 (2337, 20, 'Đăng nhập thành công với OTP', '127.0.0.1', '2024-12-13 03:54:17', '2024-12-13 03:54:17'),
 (2338, 21, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-17 14:16:05', '2024-12-17 14:16:05'),
-(2339, 22, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-18 03:19:03', '2024-12-18 03:19:03');
+(2339, 22, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-18 03:19:03', '2024-12-18 03:19:03'),
+(2340, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 10:26:29', '2024-12-19 10:26:29');
 
 -- --------------------------------------------------------
 
@@ -357,7 +358,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('zA8coNO31vocXDQdqTEISt4yTOsdGfr1mq2H2kkm', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiN1VaN3dNT2tmU2duNTRXRTliZ3lRaExqN2pMMjA2MjNCaDRhTWQ4NiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9saXN0LzEiO31zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMiQ5bFpQUUdUdFM2YTgxTXpaQTRkclJlZXpKVlZ5SEk2VC8xdjZZaGdyeDN2aklHTlM3aS9xUyI7czo4OiJmaWxhbWVudCI7YTowOnt9fQ==', 1734521704);
+('UgiksNE5FNT2bc66RVuP1pa3JtbLAssH3rNapQkb', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidG1yUUlJUFduajFmdjc2VUtiaVQ5VHpFVFZhNUZXVjlXbFJxNnNOVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9saXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7fQ==', 1734606218);
 
 -- --------------------------------------------------------
 
@@ -633,14 +634,22 @@ CREATE TABLE `source_code_orders` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `source_code_product_id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `unit_price` decimal(10,2) NOT NULL,
-  `payment_method` varchar(255) NOT NULL,
-  `payment_status` varchar(255) NOT NULL,
   `order_code` varchar(255) NOT NULL,
   `link_download` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `source_code_orders`
+--
+
+INSERT INTO `source_code_orders` (`id`, `user_id`, `source_code_product_id`, `name`, `unit_price`, `order_code`, `link_download`, `created_at`, `updated_at`) VALUES
+(3, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '579082', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 10:45:11', '2024-12-19 10:45:11'),
+(4, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '405944', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 10:54:41', '2024-12-19 10:54:41'),
+(5, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '646526', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:03:24', '2024-12-19 11:03:24');
 
 -- --------------------------------------------------------
 
@@ -668,7 +677,7 @@ CREATE TABLE `source_code_products` (
 --
 
 INSERT INTO `source_code_products` (`id`, `category_id`, `name`, `description`, `demo`, `price`, `link_download`, `purchase_count`, `view_count`, `images`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Mã Nguồn Smm Panel Siêu Xịn', '<p>&nbsp;Thuê Setup Liên Hệ Ạ</p><p>Link SQL: https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view</p><p>- Không dùng mã nguồn này cho mục đích vi phạm pháp luật&nbsp;</p>', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 100000.00, 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 0, 22, '[{\"image\":\"https:\\/\\/img.upanh.tv\\/2024\\/10\\/12\\/NK6Cnp2.jpg\"}]', '2024-12-18 10:54:14', '2024-12-18 11:35:04');
+(1, 1, 'Mã Nguồn Smm Panel Siêu Xịn', '<p>&nbsp;Thuê Setup Liên Hệ Ạ</p><p>Link SQL: https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view</p><p>- Không dùng mã nguồn này cho mục đích vi phạm pháp luật&nbsp;</p>', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 100000.00, 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 0, 105, '[{\"image\":\"https:\\/\\/img.upanh.tv\\/2024\\/10\\/12\\/NK6Cnp2.jpg\"}]', '2024-12-18 10:54:14', '2024-12-19 11:03:21');
 
 -- --------------------------------------------------------
 
@@ -907,7 +916,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `activity_history`
 --
 ALTER TABLE `activity_history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2340;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2341;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -967,7 +976,7 @@ ALTER TABLE `source_code_categories`
 -- AUTO_INCREMENT cho bảng `source_code_orders`
 --
 ALTER TABLE `source_code_orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `source_code_products`

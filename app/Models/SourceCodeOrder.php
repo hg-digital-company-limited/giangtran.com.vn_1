@@ -14,6 +14,7 @@ class SourceCodeOrder extends Model
     protected $fillable = [
         'user_id',
         'source_code_product_id',
+        'name',
         'unit_price',
         'payment_method',
         'payment_status',

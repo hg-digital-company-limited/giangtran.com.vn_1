@@ -45,40 +45,25 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        @foreach ($sourceCodeOrders as $sourceCodeOrder  )
                                                         <tr role="row" class="odd">
-                                                            <td class="sorting_1">#1</td>
+                                                            <td class="sorting_1">#{{ $loop->iteration }}</td>
                                                             <td
                                                                 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 330px; max-width: 45px;">
-                                                                Mã Nguồn Smm Panel Siêu Xịn VNĐ </td>
-                                                            <td>0 VNĐ </td>
-                                                            <td>18/11/2024 - 09:42:17</td>
-                                                            <td> <span class="badge badge-primary"> Đã Thanh Toán
+                                                                {{ $sourceCodeOrder->name }} </td>
+                                                            <td>{{ $sourceCodeOrder->unit_price }} VNĐ </td>
+                                                            <td>{{ $sourceCodeOrder->created_at }}</td>
+                                                            <td> <span class="badge badge-primary"> {{ $sourceCodeOrder->payment_status  == 'pending' ? 'Chờ Thanh Toán' : 'Đã Thanh Toán' }}
                                                                 </span> </td>
                                                             <td>
                                                                 <span
-                                                                    onclick="window.open('https://www.mediafire.com/file/336e2ly7zb8q69a/well-known.zip/file');"
+                                                                    onclick="window.open('{{ $sourceCodeOrder->link_download }}');"
                                                                     class="badge badge-dark"> <i
                                                                         class="icofont icofont-download"></i> Tải Về
                                                                 </span>
                                                             </td>
                                                         </tr>
-                                                        <tr role="row" class="odd">
-                                                            <td class="sorting_1">#1</td>
-                                                            <td
-                                                                style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 330px; max-width: 45px;">
-                                                                Mã Nguồn Smm Panel Siêu Xịn VNĐ </td>
-                                                            <td>0 VNĐ </td>
-                                                            <td>18/11/2024 - 09:42:17</td>
-                                                            <td> <span class="badge badge-primary"> Đã Thanh Toán
-                                                                </span> </td>
-                                                            <td>
-                                                                <span
-                                                                    onclick="window.open('https://www.mediafire.com/file/336e2ly7zb8q69a/well-known.zip/file');"
-                                                                    class="badge badge-dark"> <i
-                                                                        class="icofont icofont-download"></i> Tải Về
-                                                                </span>
-                                                            </td>
-                                                        </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>

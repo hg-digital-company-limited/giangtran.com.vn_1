@@ -17,4 +17,8 @@ class SourceCodeProductEloquentRepository extends EloquentRepository implements 
         return \App\Models\SourceCodeProduct::class;
     }
 
+    public function getById($id)
+    {
+        return $this->_model->find($id);
+    }
 }
