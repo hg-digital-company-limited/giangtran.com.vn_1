@@ -42,41 +42,77 @@
     <link rel="stylesheet" href="/assets/static/style.css?v=100766406">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <style>
-        .loading-bar {
-        width: 100%;
-        height: 3px;
-        margin-top: 30px;
-        position: relative;
-        overflow: hidden;
-        background: #dee2e6;
-    }
-     .loading-bar:before {
-        content: "";
-        width: 35px;
-        height: 3px;
-        background: #1062fe;
-        position: absolute;
-        left: -34px;
-        -webkit-animation: bluebar 1.5s infinite ease;
-        animation: bluebar 1.5s infinite ease;
-    }
-    @-webkit-keyframes bluebar {
-        50% {
-            left: 96px
+        .preloader {
+            display: -ms-flexbox;
+            display: flex;
+            background-color: #f4f6f9;
+            height: 100vh;
+            width: 100%;
+            transition: height 200ms linear;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
         }
-    }
 
-    @keyframes bluebar {
-        50% {
-            left: 96px
+        .animation__shake {
+            -webkit-animation: shake 1.5s;
+            animation: shake 1.5s;
         }
-    }
 
+        @keyframes shake {
+            0% {
+                transform: translate(2px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-2deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0) rotate(3deg);
+            }
+
+            30% {
+                transform: translate(0, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(2px, 1px) rotate(-2deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(4deg);
+            }
+
+            90% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
     </style>
     @livewireStyles
 </head>
 
 <body>
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="/logo/icon.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
     {{ $slot }}
 
     @livewireScripts
@@ -115,6 +151,7 @@
     <x-livewire-alert::scripts />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
 
+
 </body>
 
 
@@ -124,5 +161,19 @@
 @livewire('content.modal-alert')
 @livewire('content.modal-logout')
 
+<script>
+    window.addEventListener('load', function() {
+          setTimeout(function () {
+                var $preloader = document.querySelector('.preloader');
+                var $animation__shake = document.querySelector('.animation__shake');
 
+                if ($preloader) {
+                  $preloader.style.height = '0';
+                  setTimeout(function () {
+                    $animation__shake.style.display = 'none';
+                  }, 200);
+                }
+            }, 200);
+        });
+    </script>
 </html>
