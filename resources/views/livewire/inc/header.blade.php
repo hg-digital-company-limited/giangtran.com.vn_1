@@ -5,7 +5,7 @@
         <div class="col-auto header-left-wrapper">
             <div class="header-logo-wrapper p-0 left-header">
                 <div class="logo-wrapper"><a href="/"><img loading="lazy" class="img-fluid"
-                            src="/logo/giangtran.com.vn.png" style="height: 35px;"
+                            src="/logo/giangtran.png" style="height: 35px;"
                             alt=""></a></div>
             </div>
             <div class="toggle-sidebar">

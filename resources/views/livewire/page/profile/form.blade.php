@@ -64,7 +64,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($activities as $activity)
+                                        @foreach ($activities as $activity)
                                             <tr>
                                                 <td>{{ $loop->count - $loop->index }}</td> <!-- Số đếm giảm dần -->
                                                 <td>{{ $activity->content }}</td>

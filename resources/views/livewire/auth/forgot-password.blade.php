@@ -5,7 +5,7 @@
     </head>
     <body id="content">
           <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="/logo/icon.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="/logo/giangtran.webp" alt="AdminLTELogo" height="60" width="60">
         </div>
         <div>
             <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -16,9 +16,9 @@
                             style="background: url(/assets/assets/images/customizer/c540018ca1c7b93cb1fbc218ea0c73a7.png); background-size: cover; background-repeat: no-repeat;">
                             <div>
                                 <div class="login-main">
-                                    <center onclick="loadto('/');" style="cursor: pointer;"><img
-                                            src="/logo/giangtran.com.vn.dark.png"
-                                            style="max-width: 100%; height: 35px;"></center>
+                                    <a href="/" >
+                                        <center><img src="/logo/giangtran.webp" style="max-width: 100%; height: 35px;"></center>
+                                    </a>
 
                                     <div class="theme-form mt-3">
 

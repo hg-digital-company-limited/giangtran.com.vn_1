@@ -1,6 +1,6 @@
 <div class="sidebar-wrapper" data-sidebar-layout="stroke-svg">
     <div>
-        <div class="logo-wrapper"><a href="/" wire:navigate><img loading="lazy" class="img-fluid" src="/logo/giangtran.com.vn.png"
+        <div class="logo-wrapper"><a href="/" wire:navigate><img loading="lazy" class="img-fluid" src="/logo/giangtran.png"
                     style="height: 40px;" alt=""></a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>

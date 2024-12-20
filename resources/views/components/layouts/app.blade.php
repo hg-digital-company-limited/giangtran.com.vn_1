@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
     <meta name="google" content="notranslate">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:url" content="{{ url('/') }}">
@@ -58,6 +58,8 @@
         .animation__shake {
             -webkit-animation: shake 1.5s;
             animation: shake 1.5s;
+            width: 50vw;
+            height: initial;
         }
 
         @keyframes shake {
@@ -115,35 +117,35 @@
 
     @livewireScripts
 
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script  src="/assets/static/simplebar.js"></script>
-    <script  src="/assets/static/invoices.js?v=1731409673" ></script>
-    <script  src="/assets/static/jquery.min.js"></script>
-    <script  src="/assets/static/config.js"></script>
-    <script  src="/assets/static/cyberlux.js"></script>
-    <script  src="/assets/static/handlebars.min.js"></script>
-    <script  src="/assets/static/jquery.dataTables.min.js"></script>
-    <script  src="/assets/static/datatable.custom.js"></script>
-    <script  src="/assets/static/bundle.min.js"></script>
-    <script  src="/assets/static/feather.min.js"></script>
-    <script  src="/assets/static/bootstrap.bundle.min.js"></script>
-    <script  src="/assets/static/feather.min.js"></script>
-    <script  src="/assets/static/feather-icon.js"></script>
-    <script  src="/assets/static/custom.js"></script>
-    <script  src="/assets/static/swiper-bundle.min.js"></script>
-    <script  src="/assets/static/sidebar-menu.js"></script>
-    <script  src="/assets/static/sidebar-pin.js"></script>
-    <script  src="/assets/static/bootstrap-notify.min.js"></script>
-    <script  src="/assets/static/index.js"></script>
-    <script  src="/assets/static/custom_touchspin.js"></script>
-    <script  src="/assets/static/simple-datatable.js"></script>
-    <script  src="/assets/static/handlebars.js"></script>
-    <script  src="/assets/static/typeahead.bundle.js"></script>
-    <script  src="/assets/static/typeahead.custom.js"></script>
-    <script  src="/assets/static/search-handlebars.js"></script>
-    <script  src="/assets/static/script.js"></script>
-    <script  src="/assets/static/customizer.js"></script>
-    <script src="/assets/static/profile-option.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/assets/static/simplebar.js"></script>
+    <script src="/assets/static/invoices.js?v=1731409673"></script>
+    <script src="/assets/static/jquery.min.js"></script>
+    <script src="/assets/static/config.js"></script>
+    <script src="/assets/static/cyberlux.js"></script>
+    <script src="/assets/static/handlebars.min.js"></script>
+    <script src="/assets/static/jquery.dataTables.min.js"></script>
+    <script src="/assets/static/datatable.custom.js"></script>
+    <script src="/assets/static/bundle.min.js"></script>
+    <script src="/assets/static/feather.min.js"></script>
+    <script src="/assets/static/bootstrap.bundle.min.js"></script>
+    <script src="/assets/static/feather.min.js"></script>
+    <script src="/assets/static/feather-icon.js"></script>
+    <script src="/assets/static/custom.js"></script>
+    <script src="/assets/static/swiper-bundle.min.js"></script>
+    <script src="/assets/static/sidebar-menu.js"></script>
+    <script src="/assets/static/sidebar-pin.js"></script>
+    <script src="/assets/static/bootstrap-notify.min.js"></script>
+    <script src="/assets/static/index.js"></script>
+    <script src="/assets/static/custom_touchspin.js"></script>
+    <script src="/assets/static/simple-datatable.js"></script>
+    <script src="/assets/static/handlebars.js"></script>
+    <script src="/assets/static/typeahead.bundle.js"></script>
+    <script src="/assets/static/typeahead.custom.js"></script>
+    <script src="/assets/static/search-handlebars.js"></script>
+    <script src="/assets/static/script.js"></script>
+    <script src="/assets/static/customizer.js"></script>
+    <script src="/assets/static/profile-option.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <x-livewire-alert::scripts />
@@ -159,18 +161,19 @@
 @livewire('content.modal-logout')
 
 <script>
-     setTimeout(function() {
-                var $preloader = document.querySelector('.preloader');
-                var $animation__shake = document.querySelector('.animation__shake');
+    setTimeout(function() {
+        var $preloader = document.querySelector('.preloader');
+        var $animation__shake = document.querySelector('.animation__shake');
 
-                if ($preloader) {
-                    $preloader.style.height = '0';
-                    setTimeout(function() {
-                        if ($animation__shake) {
-                            $animation__shake.style.display = 'none';
-                        }
-                    }, 200);
+        if ($preloader) {
+            $preloader.style.height = '0';
+            setTimeout(function() {
+                if ($animation__shake) {
+                    $animation__shake.style.display = 'none';
                 }
-            }, 800);
+            }, 200);
+        }
+    }, 800);
 </script>
+
 </html>

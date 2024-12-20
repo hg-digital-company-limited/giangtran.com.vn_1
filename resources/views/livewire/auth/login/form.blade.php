@@ -1,6 +1,7 @@
 <div class="login-main">
-    <center onclick="loadto('/');" style="cursor: pointer;"><img src="/logo/giangtran.com.vn.dark.png"
-            style="max-width: 100%; height: 35px;"></center>
+    <a href="/"  >
+        <center><img src="/logo/giangtran.webp" style="max-width: 100%; height: 35px;"></center>
+    </a>
 
     <div class="theme-form mt-3">
 

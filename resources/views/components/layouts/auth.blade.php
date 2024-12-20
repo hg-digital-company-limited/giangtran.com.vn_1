@@ -56,6 +56,8 @@
         .animation__shake {
             -webkit-animation: shake 1.5s;
             animation: shake 1.5s;
+            width: 50vw;
+            height: initial;
         }
 
         @keyframes shake {
