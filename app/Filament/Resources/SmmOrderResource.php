@@ -61,14 +61,6 @@ class SmmOrderResource extends Resource
                     ->required()
                     ->label('Số Lượng Còn Lại')
                     ->numeric(),
-                Forms\Components\TextInput::make('payment_method')
-                    ->required()
-                    ->label('Phương Thức Thanh Toán')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('payment_status')
-                    ->required()
-                    ->label('Trạng Thái Thanh Toán')
-                    ->maxLength(255),
             ]);
     }
 
@@ -111,16 +103,10 @@ class SmmOrderResource extends Resource
                 Tables\Columns\TextColumn::make('link')
                     ->searchable()
                     ->label('Link'),
-                Tables\Columns\TextColumn::make('payment_method')
-                    ->searchable()
-                    ->label('Phương Thức Thanh Toán'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('payment_status')
-                    ->searchable()
-                    ->label('Trạng Thái Thanh Toán'),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()

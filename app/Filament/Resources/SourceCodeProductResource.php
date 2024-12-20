@@ -18,7 +18,9 @@ class SourceCodeProductResource extends Resource
     protected static ?string $model = SourceCodeProduct::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Sản Phẩm';
 
+    protected static ?string $navigationGroup = 'Source Code';
     public static function form(Form $form): Form
     {
         return $form
@@ -111,7 +113,10 @@ class SourceCodeProductResource extends Resource
             //
         ];
     }
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getPages(): array
     {
         return [

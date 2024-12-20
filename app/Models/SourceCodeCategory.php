@@ -12,4 +12,9 @@ class SourceCodeCategory extends Model
     protected $table = 'source_code_categories'; // Tên bảng
 
     protected $fillable = ['name']; // Các cột có thể gán giá trị hàng loạt
+
+    public function sourceCodeProducts()
+    {
+        return $this->hasMany(SourceCodeProduct::class, 'category_id');
+    }
 }

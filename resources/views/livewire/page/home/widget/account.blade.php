@@ -42,7 +42,7 @@
                                 class="badge badge-secondary text-light">Lịch
                                 Sử
                                 Hoạt Động</a>
-                            <a wire:click="showModalLogout" style="cursor: pointer;"
+                            <a wire:click="logout" style="cursor: pointer;"
                                 class="badge badge-danger text-light">Đăng
                                 Xuất</a>
                         </div>

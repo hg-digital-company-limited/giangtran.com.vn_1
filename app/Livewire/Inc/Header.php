@@ -32,8 +32,9 @@ class Header extends Component
         ]);
     }
 
-    public function showModalLogout()
+    public function logout()
     {
-        $this->dispatch('showModalLogout');
+        Auth::logout();
+        return redirect('/login');
     }
 }

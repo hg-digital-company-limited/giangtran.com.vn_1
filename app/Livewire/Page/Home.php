@@ -19,19 +19,17 @@ class Home extends Component
     {
         $this->smmOrderRepository = $smmOrderRepository;
         $this->sourceCodeRepository = $sourceCodeRepository;
-        $this->countSmmOrder = $this->smmOrderRepository->getOrdersByCurrentUser()->count();
-        $this->countSourceCodeOrder = $this->sourceCodeRepository->getAllByUser(Auth::user()->id)->count();
-        // $this->dispatch('showModalLogout');
-    }
-    public function showModalLogout()
-    {
-        $this->dispatch('showModalLogout');
+        if (Auth::check()) {
+            $this->countSmmOrder = $this->smmOrderRepository->getOrdersByCurrentUser()->count();
+            $this->countSourceCodeOrder = $this->sourceCodeRepository->getAllByUser(Auth::user()->id)->count();
+        }
     }
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
+
     public function render()
     {
         return view('livewire.page.home');

@@ -45,7 +45,8 @@
         .preloader {
             display: -ms-flexbox;
             display: flex;
-            background-color: #f4f6f9;
+            background-color: #fafafa;
+
             height: 100vh;
             width: 100%;
             transition: height 200ms linear;
@@ -158,7 +159,6 @@
 @livewire('inc.social-popup')
 @livewire('inc.alert')
 @livewire('content.modal-alert')
-@livewire('content.modal-logout')
 
 <script>
     setTimeout(function() {

@@ -12,8 +12,6 @@ class SmmOrderOverview extends BaseWidget
     {
         // Retrieve order statistics
         $totalOrders = SmmOrder::count();
-        $unpaidOrders = SmmOrder::where('payment_status', 'pending')->count();
-        $paidOrders = SmmOrder::where('payment_status', 'paid')->count();
         $todayOrders = SmmOrder::whereDate('created_at', today())->count();
 
         // Calculate total revenue
@@ -44,15 +42,6 @@ class SmmOrderOverview extends BaseWidget
                 ->color('success')
                 ->icon('heroicon-o-shopping-cart'),
 
-            Stat::make('Đơn Hàng SMM Chưa Thanh Toán', $unpaidOrders)
-                ->description('Đơn hàng SMM chưa thanh toán.')
-                ->color('danger')
-                ->icon('heroicon-o-x-circle'),
-
-            Stat::make('Đơn Hàng SMM Đã Thanh Toán', $paidOrders)
-                ->description('Đơn hàng SMM đã được thanh toán.')
-                ->color('primary')
-                ->icon('heroicon-o-check-circle'),
         ];
     }
 }
