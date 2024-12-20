@@ -18,14 +18,12 @@ class Form extends Component
 
 
 
-    public $selectedCategory, $categories, $services, $selectedCategory_path, $quantity, $link, $image, $paymentMethod; // Danh sách danh mục
+    public $selectedCategory, $categories, $services, $selectedCategory_path, $quantity, $link, $image; // Danh sách danh mục
     public $selectedService, $selectedServicePrice, $selectedServiceMin, $selectedServiceMax, $selectedServiceTime;
     public $errors = [];
-    protected $invoiceRepository;
     protected $smmOrderRepository;
-    public function mount(InvoiceRepositoryInterface $invoiceRepository, SmmOrderRepositoryInterface $smmOrderRepository)
+    public function mount(SmmOrderRepositoryInterface $smmOrderRepository)
     {
-        $this->invoiceRepository = $invoiceRepository;
         $this->smmOrderRepository = $smmOrderRepository;
 
         $this->balance = Auth::user()->balance ?? 0;
@@ -104,10 +102,6 @@ class Form extends Component
             $this->errors['auth'] = 'Vui lòng đăng nhập để tạo đơn hàng';
         }
 
-        // Validate required fields
-        if (is_null($this->paymentMethod)) {
-            $this->errors['paymentMethod'] = 'Vui lòng chọn phương thức thanh toán.';
-        }
         if (is_null($this->selectedService)) {
             $this->errors['selectedService'] = 'Vui lòng chọn gói dịch vụ.';
         }
@@ -120,8 +114,8 @@ class Form extends Component
         if (empty($this->link)) {
             $this->errors['link'] = 'Vui lòng nhập link.';
         }
-        if ($this->paymentMethod == 'bank_transfer' && $totalPrice < 10000) {
-            $this->errors['paymentMethod'] = 'Số tiền tối thiểu Chuyển Khoản Ngân Hàng là 10.000 VNĐ.';
+        if ($this->balance < $totalPrice) {
+            $this->errors['paymentMethod'] = 'Số dư tài khoản không đủ để thanh toán.';
         }
         // If there are errors, alert the user and return
         if (!empty($this->errors)) {
@@ -129,28 +123,9 @@ class Form extends Component
                 $this->alert('error', $error); // Alert each error
             }
             $this->dispatch('select2:updated');
-
             return;
         }
 
-        // Check if user has sufficient balance
-        if ($this->paymentMethod == 'account_balance') {
-            if ($userBalance < $totalPrice) {
-                $this->alert('error', 'Số dư tài khoản không đủ để thanh toán.'); // Alert insufficient balance
-                $this->dispatch('select2:updated');
-                return;
-            }
-        }
-        // Check for unpaid invoices
-        $this->invoiceRepository = app(InvoiceRepositoryInterface::class);
-        if ($this->invoiceRepository->hasUnpaidInvoices()) {
-            $this->dispatch('showModalAlert', [
-                'title' => 'Thông báo',
-                'message' => 'Bạn có hóa đơn chưa thanh toán, vui lòng thanh toán hóa đơn trước khi tạo đơn hàng mới',
-            ]);
-            $this->dispatch('select2:updated');
-            return;
-        }
 
         // Prepare order data
         $data = [
@@ -163,23 +138,16 @@ class Form extends Component
             'start_count' => 0,
             'link' => $this->link,
             'remains' => $this->quantity,
-            'payment_method' => $this->paymentMethod,
         ];
         // Create the order
 
         $order = $this->smmOrderRepository->createOrder($data);
-        if ($order['status']) {
+        if ($order) {
             // Reset form fields after successful order creation
-
-            // Redirect based on payment status
-            if (isset($order['payment_status']) && $order['payment_status'] == 'pending') {
-                return redirect('hoa-don/' . $order['order_code']);
-            } else {
-                $this->alert($order['status'], $order['message']);
-                $this->dispatch('select2:updated');
-            }
+            $this->reset();
+            $this->alert('success', 'Đơn hàng đã được tạo thành công');
+            return redirect('/smm/manager');
         } else {
-            // Handle order creation failure
             $this->alert('error', 'Đã xảy ra lỗi khi tạo đơn hàng. Vui lòng thử lại.');
         }
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 19, 2024 lúc 12:03 PM
+-- Thời gian đã tạo: Th12 20, 2024 lúc 01:03 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -143,7 +143,9 @@ INSERT INTO `activity_history` (`id`, `user_id`, `content`, `ip_address`, `creat
 (2337, 20, 'Đăng nhập thành công với OTP', '127.0.0.1', '2024-12-13 03:54:17', '2024-12-13 03:54:17'),
 (2338, 21, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-17 14:16:05', '2024-12-17 14:16:05'),
 (2339, 22, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-18 03:19:03', '2024-12-18 03:19:03'),
-(2340, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 10:26:29', '2024-12-19 10:26:29');
+(2340, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 10:26:29', '2024-12-19 10:26:29'),
+(2341, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 13:20:04', '2024-12-19 13:20:04'),
+(2342, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 13:31:27', '2024-12-19 13:31:27');
 
 -- --------------------------------------------------------
 
@@ -192,34 +194,6 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `invoices`
---
-
-CREATE TABLE `invoices` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `invoice_code` varchar(255) NOT NULL,
-  `invoice_type` varchar(255) NOT NULL,
-  `service` varchar(255) NOT NULL,
-  `invoice_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `amount` decimal(15,2) NOT NULL,
-  `payment_due_date` datetime NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `user_id` int(255) NOT NULL,
-  `payment_status` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `invoices`
---
-
-INSERT INTO `invoices` (`id`, `invoice_code`, `invoice_type`, `service`, `invoice_date`, `amount`, `payment_due_date`, `created_at`, `updated_at`, `user_id`, `payment_status`) VALUES
-(32, '927083', 'Đăng Ký Dịch Vụ', 'ˢˢ Facebook Reel & Video Views | Instant | Statistics Support | Views 3 Seconds+ ♻️⛔🔥', '2024-12-18 07:16:22', 10650.00, '2024-12-18 14:17:49', '2024-12-18 07:14:49', '2024-12-18 07:16:22', 23, 'paid'),
-(33, '905692', 'Đăng Ký Dịch Vụ', 'Facebook Page/Profile Followers | Instant | 20K Per Day | 30 Days Refill ⚡♻️⛔', '2024-12-18 07:20:26', 18280.00, '2024-12-18 14:20:17', '2024-12-18 07:17:17', '2024-12-18 07:20:26', 23, 'paid');
 
 -- --------------------------------------------------------
 
@@ -358,7 +332,13 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('UgiksNE5FNT2bc66RVuP1pa3JtbLAssH3rNapQkb', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidG1yUUlJUFduajFmdjc2VUtiaVQ5VHpFVFZhNUZXVjlXbFJxNnNOVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9saXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7fQ==', 1734606218);
+('4Agl7FZJnnNbWM53KMEiLDqkgQD4mhGHAM6niCA8', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSnR6eE90RVNKUTV2SnVGRU02TGdDSDloUzc2UlpJZXd2Y0V2akxHNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9tYW5hZ2VyIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7fQ==', 1734615137),
+('eOwxWUF7tjky9bXniKdhhbbDymlo6B5QCk5JjE4c', 20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicVpQSmxnQktjUVNBRE5jUjF6c2ZSSVZDak9SUzRVcUFzNkhHcUFnSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zbW0vY3JlYXRlIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjA7fQ==', 1734652976),
+('IGm0kxKWrMhZFKPhSk07CkVtAHXGvB7oRYKihQ1B', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZjJjNU5NdGZCT25HNzF3UFdwUWRGY1I1aUhlMWJyVE5PbUJqdGNNTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9mb3Jnb3QtcGFzc3dvcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1734614979),
+('p1o8D1dHTcb0u13As3dObiDIvigEueV0AtQl4ez5', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTElGQXhKcXJxc1ZXQ3JXUFF4bHp6Q3dMRjJBTDFjT1hWVTIyZEtlayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734609626),
+('UgiksNE5FNT2bc66RVuP1pa3JtbLAssH3rNapQkb', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidG1yUUlJUFduajFmdjc2VUtiaVQ5VHpFVFZhNUZXVjlXbFJxNnNOVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIzO30=', 1734609613),
+('w8HL0Vmm68B1BLFcQNqtCgmrL41f6MpWU3G1UCId', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicW01b0lVc0p2d3JCb2NFSFluNmpFaVFtb1BMMURpT0Q2eWlMZ2FVMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734610338),
+('wtfSFxcmABJBXg04qv87pLnI9TmL3twlZLHuHxhc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVk5ZZDVCSlU1WGpXZzNpWHcxUEF6RjBPMTNDYXUwbUZCa2ZCcnFuMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fX0=', 1734615059);
 
 -- --------------------------------------------------------
 
@@ -415,20 +395,20 @@ CREATE TABLE `smm_orders` (
   `start_count` int(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `remains` int(11) NOT NULL,
-  `payment_method` varchar(255) DEFAULT NULL,
-  `payment_status` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `order_code` varchar(255) DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `smm_orders`
 --
 
-INSERT INTO `smm_orders` (`id`, `user_id`, `smm_service_id`, `quantity`, `total_price`, `status`, `unit_price`, `start_count`, `link`, `remains`, `payment_method`, `payment_status`, `created_at`, `updated_at`, `order_code`) VALUES
-(69, 23, 155, 5000, 10650.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 5000, 'bank_transfer', 'pending', '2024-12-18 07:14:49', '2024-12-18 07:14:49', '927083'),
-(70, 23, 179, 500, 18280.00, 'pending', 36.56, 0, 'https://giangtran.com.vn/', 500, 'bank_transfer', 'pending', '2024-12-18 07:17:17', '2024-12-18 07:17:17', '905692');
+INSERT INTO `smm_orders` (`id`, `user_id`, `smm_service_id`, `quantity`, `total_price`, `status`, `unit_price`, `start_count`, `link`, `remains`, `created_at`, `updated_at`) VALUES
+(69, 23, 155, 5000, 10650.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 5000, '2024-12-18 07:14:49', '2024-12-18 07:14:49'),
+(70, 23, 179, 500, 18280.00, 'pending', 36.56, 0, 'https://giangtran.com.vn/', 500, '2024-12-18 07:17:17', '2024-12-18 07:17:17'),
+(71, 20, 155, 500, 1065.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 500, '2024-12-19 23:52:57', '2024-12-19 23:52:57'),
+(72, 20, 155, 500, 1065.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 500, '2024-12-19 23:55:47', '2024-12-19 23:55:47'),
+(73, 20, 155, 500, 1065.00, 'pending', 2.13, 0, 'https://giangtran.com.vn/', 500, '2024-12-19 23:56:35', '2024-12-19 23:56:35');
 
 -- --------------------------------------------------------
 
@@ -649,7 +629,29 @@ CREATE TABLE `source_code_orders` (
 INSERT INTO `source_code_orders` (`id`, `user_id`, `source_code_product_id`, `name`, `unit_price`, `order_code`, `link_download`, `created_at`, `updated_at`) VALUES
 (3, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '579082', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 10:45:11', '2024-12-19 10:45:11'),
 (4, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '405944', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 10:54:41', '2024-12-19 10:54:41'),
-(5, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '646526', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:03:24', '2024-12-19 11:03:24');
+(5, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '646526', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:03:24', '2024-12-19 11:03:24'),
+(6, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '818735', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:27:52', '2024-12-19 11:27:52'),
+(7, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '458324', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:28:21', '2024-12-19 11:28:21'),
+(8, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '756099', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:30:34', '2024-12-19 11:30:34'),
+(9, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '148580', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:30:54', '2024-12-19 11:30:54'),
+(10, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '676051', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:31:22', '2024-12-19 11:31:22'),
+(11, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '205130', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:31:29', '2024-12-19 11:31:29'),
+(12, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '925560', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:33:04', '2024-12-19 11:33:04'),
+(13, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '329989', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:11', '2024-12-19 11:34:11'),
+(14, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '167156', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:32', '2024-12-19 11:34:32'),
+(15, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '354495', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:37', '2024-12-19 11:34:37'),
+(16, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '412143', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(17, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '748625', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(18, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '425199', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(19, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '647171', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(20, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '387092', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(21, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '106377', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:34:40', '2024-12-19 11:34:40'),
+(22, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '125881', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:35:58', '2024-12-19 11:35:58'),
+(23, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '733588', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:36:52', '2024-12-19 11:36:52'),
+(24, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '248144', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:46:20', '2024-12-19 11:46:20'),
+(25, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '911895', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:47:16', '2024-12-19 11:47:16'),
+(26, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '481256', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 11:50:35', '2024-12-19 11:50:35'),
+(27, 23, 1, 'Mã Nguồn Smm Panel Siêu Xịn', 100000.00, '414446', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', '2024-12-19 13:32:16', '2024-12-19 13:32:16');
 
 -- --------------------------------------------------------
 
@@ -677,7 +679,7 @@ CREATE TABLE `source_code_products` (
 --
 
 INSERT INTO `source_code_products` (`id`, `category_id`, `name`, `description`, `demo`, `price`, `link_download`, `purchase_count`, `view_count`, `images`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Mã Nguồn Smm Panel Siêu Xịn', '<p>&nbsp;Thuê Setup Liên Hệ Ạ</p><p>Link SQL: https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view</p><p>- Không dùng mã nguồn này cho mục đích vi phạm pháp luật&nbsp;</p>', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 100000.00, 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 0, 105, '[{\"image\":\"https:\\/\\/img.upanh.tv\\/2024\\/10\\/12\\/NK6Cnp2.jpg\"}]', '2024-12-18 10:54:14', '2024-12-19 11:03:21');
+(1, 1, 'Mã Nguồn Smm Panel Siêu Xịn', '<p>&nbsp;Thuê Setup Liên Hệ Ạ</p><p>Link SQL: https://drive.google.com/file/d/167K5cOI8HyU6IVVTnnz9VKFG-6Pg4Mu2/view</p><p>- Không dùng mã nguồn này cho mục đích vi phạm pháp luật&nbsp;</p>', 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 100000.00, 'https://img.upanh.tv/2024/10/12/NK6Cnp2.jpg', 3, 127, '[{\"image\":\"https:\\/\\/img.upanh.tv\\/2024\\/10\\/12\\/NK6Cnp2.jpg\"}]', '2024-12-18 10:54:14', '2024-12-19 23:30:00');
 
 -- --------------------------------------------------------
 
@@ -769,10 +771,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `theme`, `theme_color`, `balance`, `ip_address`, `other_contact_info`, `device`, `total_consumption`, `total_deposit`, `two_factor_auth_status`, `avatar`, `contact`, `otp`) VALUES
-(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '5TPIM7HJbBSnTtoo1Ok9xzO3IatlMzcak9x3afOUHLYU3KcuhLcY5Fcl0fSh', '2024-12-07 02:40:50', '2024-12-13 04:08:54', 'default', NULL, 995351.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
+(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '5TPIM7HJbBSnTtoo1Ok9xzO3IatlMzcak9x3afOUHLYU3KcuhLcY5Fcl0fSh', '2024-12-07 02:40:50', '2024-12-19 23:56:35', 'default', NULL, 992156.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
 (21, '2509robloxx', '2509roblox@gmail.comx', '2509robloxx', NULL, '$2y$12$oGWYZv37sgROOHeRHBZKoueExVCXDhOyQw8iU5uY6JfX3hMIxlWcm', NULL, '2024-12-17 14:15:59', '2024-12-17 14:15:59', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
 (22, '2509robloxa', '2509robloxa@gmail.com', '2509robloxa', NULL, '$2y$12$FEN67dl2z5nuGkvKhfIKcO24lCuQTkP.xGMepxjcPYzdBL.T35Qiu', NULL, '2024-12-18 03:18:56', '2024-12-18 03:18:56', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
-(23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'ohs5sINH6LdNHhYDHNieoMC25njLABBt8tC9bfoTJnUKm4QjUq3PENg31OKV', '2024-12-18 03:19:54', '2024-12-18 11:23:44', 'default', NULL, 998935.00, NULL, NULL, NULL, 0.00, 1000000.00, 0, NULL, NULL, NULL);
+(23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'iNd8Z6Lmw2plHPI2NEKJBS8ZwafBDwJkkmvaHo7VTHX0Gt1EbU0vxSe997O9', '2024-12-18 03:19:54', '2024-12-19 13:32:16', 'default', NULL, 999800000.00, NULL, NULL, NULL, 1500000.00, 1000000.00, 0, NULL, NULL, NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -803,13 +805,6 @@ ALTER TABLE `cache_locks`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- Chỉ mục cho bảng `invoices`
---
-ALTER TABLE `invoices`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `invoices_invoice_code_unique` (`invoice_code`);
 
 --
 -- Chỉ mục cho bảng `jobs`
@@ -916,19 +911,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `activity_history`
 --
 ALTER TABLE `activity_history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2341;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2343;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `invoices`
---
-ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT cho bảng `jobs`
@@ -958,7 +947,7 @@ ALTER TABLE `smm_categories`
 -- AUTO_INCREMENT cho bảng `smm_orders`
 --
 ALTER TABLE `smm_orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT cho bảng `smm_services`
@@ -976,7 +965,7 @@ ALTER TABLE `source_code_categories`
 -- AUTO_INCREMENT cho bảng `source_code_orders`
 --
 ALTER TABLE `source_code_orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT cho bảng `source_code_products`

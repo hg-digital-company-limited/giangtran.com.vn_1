@@ -155,7 +155,6 @@
 
 @livewire('inc.social-popup')
 @livewire('inc.alert')
-@livewire('content.modal-hoa-don')
 @livewire('content.modal-alert')
 @livewire('content.modal-logout')
 

@@ -32,7 +32,6 @@ use App\Livewire\Template\VpsStore\CloudVpsVietNam\CloudVpsPro\Detail;
 use App\Livewire\Template\KhoMaNguon\Detail as KhoMaNguonDetail;
 use App\Livewire\Template\Manage\Code;
 use App\Livewire\Template\Product\Hosting\Detail as DetailHosting;
-use App\Livewire\Page\Invoice as Invoice;
 use App\Livewire\Services\Smm\Create as CreateSmm;
 use App\Livewire\Services\Smm\Manager as ManagerSmm;
 use App\Livewire\Services\SourceCode\Create as CreateSourceCode;
@@ -55,7 +54,6 @@ Route::middleware(CheckAuth::class)->group(function () {
 Route::middleware(EnsureUserIsAuthenticated::class)->group(function () {
     Route::get('/profile', Profile::class)->name('profile');
     Route::get('/chuyen-khoan', ChuyenKhoan::class)->name('chuyen-khoan');
-    Route::get('/hoa-don/{id}', action: Invoice::class)->name('hoa-don');
     Route::get('/api/transaction', [Transaction::class, 'transaction'])->name('cron-transaction');
     Route::get('/api/checkpayment', [Checkpayment::class, 'checkPayment'])->name('checkpayment');
     Route::get('/api/invoice/{invoice_code}', [Checkpayment::class, 'checkInvoice'])->name('checkinvoice');

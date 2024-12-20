@@ -19,29 +19,6 @@
                             </ul>
                         </div>
                     @endif
-
-                    <div class="form-group">
-                        <label> Phương Thức Thanh Toán </label>
-                        <div class="card-wrapper border rounded-3 checkbox-checked">
-                            <div class="radio-form">
-                                <div class="form-check">
-                                    <input class="form-check-input" id="radio14" type="radio" name="radio-stacked"
-                                           wire:model="paymentMethod" value="account_balance" checked>
-                                    <label class="form-check-label" for="radio14">
-                                        Số Dư Tài Khoản ({{ App\Helpers\FormatHelper::formatCurrency($balance) }}<sup>đ</sup>)
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" id="radio13" type="radio" name="radio-stacked"
-                                           wire:model="paymentMethod" value="bank_transfer">
-                                    <label class="form-check-label" for="radio13"> Chuyển Khoản Ngân Hàng </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-3"></div>
-
                     <div class="form-group">
                         <label for="categories">Danh Mục</label>
                         <input type="hidden" id="cycle_max" value="12">

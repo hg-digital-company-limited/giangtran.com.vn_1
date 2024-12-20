@@ -12,7 +12,9 @@ class Manager extends Component
     public function mount(SourceCodeOrderRepositoryInterface $sourceCodeOrderRepository)
     {
         $this->sourceCodeOrderRepository = $sourceCodeOrderRepository;
-        $this->sourceCodeOrders = $this->sourceCodeOrderRepository->getAllByUser(auth()->user()->id);
+        if(auth()->check()){
+            $this->sourceCodeOrders = $this->sourceCodeOrderRepository->getAllByUser(auth()->user()->id);
+        }
 
     }
     public function render()

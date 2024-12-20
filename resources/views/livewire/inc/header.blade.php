@@ -66,14 +66,7 @@
                                 </svg>
                             </div>
                         </li>
-                        <li class="cart-nav onhover-dropdown" data-bs-toggle="modal" data-bs-target="#modalHoaDon"   >
-                            <div class="cart-box onhover-click">
-                                <svg>
-                                    <use href="/assets/assets/svg/icon-sprite.svg#stroke-ecommerce"></use>
-                                </svg><span class="badge rounded-pill badge-primary"
-                                    id="number_bill">{{ $countInvoices  }}</span>
-                            </div>
-                        </li>
+
 
 
                         <li class="profile-nav onhover-dropdown">
