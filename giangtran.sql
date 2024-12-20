@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 20, 2024 lúc 01:03 AM
+-- Thời gian đã tạo: Th12 20, 2024 lúc 02:54 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -145,7 +145,8 @@ INSERT INTO `activity_history` (`id`, `user_id`, `content`, `ip_address`, `creat
 (2339, 22, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-18 03:19:03', '2024-12-18 03:19:03'),
 (2340, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 10:26:29', '2024-12-19 10:26:29'),
 (2341, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 13:20:04', '2024-12-19 13:20:04'),
-(2342, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 13:31:27', '2024-12-19 13:31:27');
+(2342, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-19 13:31:27', '2024-12-19 13:31:27'),
+(2343, 23, 'Đăng nhập bằng tài khoản', '127.0.0.1', '2024-12-20 01:36:30', '2024-12-20 01:36:30');
 
 -- --------------------------------------------------------
 
@@ -158,14 +159,6 @@ CREATE TABLE `cache` (
   `value` mediumtext NOT NULL,
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `cache`
---
-
-INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1734518072),
-('a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1734518072;', 1734518072);
 
 -- --------------------------------------------------------
 
@@ -332,13 +325,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4Agl7FZJnnNbWM53KMEiLDqkgQD4mhGHAM6niCA8', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSnR6eE90RVNKUTV2SnVGRU02TGdDSDloUzc2UlpJZXd2Y0V2akxHNCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zb3VyY2UtY29kZS9tYW5hZ2VyIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjM7fQ==', 1734615137),
-('eOwxWUF7tjky9bXniKdhhbbDymlo6B5QCk5JjE4c', 20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicVpQSmxnQktjUVNBRE5jUjF6c2ZSSVZDak9SUzRVcUFzNkhHcUFnSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9zbW0vY3JlYXRlIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MjA7fQ==', 1734652976),
-('IGm0kxKWrMhZFKPhSk07CkVtAHXGvB7oRYKihQ1B', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZjJjNU5NdGZCT25HNzF3UFdwUWRGY1I1aUhlMWJyVE5PbUJqdGNNTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9mb3Jnb3QtcGFzc3dvcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1734614979),
-('p1o8D1dHTcb0u13As3dObiDIvigEueV0AtQl4ez5', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTElGQXhKcXJxc1ZXQ3JXUFF4bHp6Q3dMRjJBTDFjT1hWVTIyZEtlayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734609626),
-('UgiksNE5FNT2bc66RVuP1pa3JtbLAssH3rNapQkb', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidG1yUUlJUFduajFmdjc2VUtiaVQ5VHpFVFZhNUZXVjlXbFJxNnNOVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIzO30=', 1734609613),
-('w8HL0Vmm68B1BLFcQNqtCgmrL41f6MpWU3G1UCId', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicW01b0lVc0p2d3JCb2NFSFluNmpFaVFtb1BMMURpT0Q2eWlMZ2FVMSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734610338),
-('wtfSFxcmABJBXg04qv87pLnI9TmL3twlZLHuHxhc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVk5ZZDVCSlU1WGpXZzNpWHcxUEF6RjBPMTNDYXUwbUZCa2ZCcnFuMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fX0=', 1734615059);
+('4D8BlpxYA5pkHTwxDQtnqXT0FsYya1dr5GeYLbsM', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoid1RLb0hveXZNaVVsRW0wcXVpWHBIYVhHOTVmMFNIaGQ1UkIxbkNDciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734657738),
+('9IZXRhMIFblNS5omwsP9eRIaMdWIKK1VGtUe6w9T', 23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicVpQSmxnQktjUVNBRE5jUjF6c2ZSSVZDak9SUzRVcUFzNkhHcUFnSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjIzO30=', 1734659598),
+('GfKZ96xNDfhiUnM9bXVnZ6qN949h29mHQbQBwewX', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiT0tvMzFoUWZ0VVV4YnMwTUwzWVh5WVd2TWtsR0xnTW1VNjVPa1MzYyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734657625),
+('wRO6dnxyjcPpqisrzVcHrOLZcpUmV1NVVakjCWJq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiUjgyMDlYTDM3RjhYY0tsZ1FHTTdpRGhJQXlTZVlBR01yVnBuYjRrVCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1734657594);
 
 -- --------------------------------------------------------
 
@@ -771,7 +761,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `theme`, `theme_color`, `balance`, `ip_address`, `other_contact_info`, `device`, `total_consumption`, `total_deposit`, `two_factor_auth_status`, `avatar`, `contact`, `otp`) VALUES
-(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '5TPIM7HJbBSnTtoo1Ok9xzO3IatlMzcak9x3afOUHLYU3KcuhLcY5Fcl0fSh', '2024-12-07 02:40:50', '2024-12-19 23:56:35', 'default', NULL, 992156.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
+(20, '2509roblox', '2509roblox@gmail.com', '2509roblox', NULL, '$2y$12$2FmmCG2jHRzLWCAKkHaS3.ltCeAogpKT1vbJZCeplP9L7.D2ZjVrC', '7rf7EYLOwzDAIk6V9aUJzKACrASrKvniG9nqvc8nW70Wd60MoLUekzBCQgmg', '2024-12-07 02:40:50', '2024-12-19 23:56:35', 'default', NULL, 992156.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 1, NULL, '123', 179583),
 (21, '2509robloxx', '2509roblox@gmail.comx', '2509robloxx', NULL, '$2y$12$oGWYZv37sgROOHeRHBZKoueExVCXDhOyQw8iU5uY6JfX3hMIxlWcm', NULL, '2024-12-17 14:15:59', '2024-12-17 14:15:59', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
 (22, '2509robloxa', '2509robloxa@gmail.com', '2509robloxa', NULL, '$2y$12$FEN67dl2z5nuGkvKhfIKcO24lCuQTkP.xGMepxjcPYzdBL.T35Qiu', NULL, '2024-12-18 03:18:56', '2024-12-18 03:18:56', 'default', NULL, 0.00, '127.0.0.1', NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', NULL, NULL, 0, NULL, NULL, NULL),
 (23, 'admin', 'admin@gmail.com', 'admin@gmail.com', NULL, '$2y$12$9lZPQGTtS6a81MzZA4drReezJVVyHI6T/1v6Yhgrx3vjIGNS7i/qS', 'iNd8Z6Lmw2plHPI2NEKJBS8ZwafBDwJkkmvaHo7VTHX0Gt1EbU0vxSe997O9', '2024-12-18 03:19:54', '2024-12-19 13:32:16', 'default', NULL, 999800000.00, NULL, NULL, NULL, 1500000.00, 1000000.00, 0, NULL, NULL, NULL);
@@ -911,7 +901,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `activity_history`
 --
 ALTER TABLE `activity_history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2343;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2344;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`

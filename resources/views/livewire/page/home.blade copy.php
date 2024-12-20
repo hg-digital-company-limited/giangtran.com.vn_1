@@ -29,7 +29,7 @@
 
                                 <div class="col-xl-6 box-col-6">
                                     <div class="row">
-                                        <div class="col-xl-12 box-col-12">
+                                    <div class="col-xl-12 box-col-12">
                                             <div class="card title-line upgrade-card overflow-hidden">
                                                 <div class="row align-items-end">
                                                     <div class="col-sm-8 col-11">
@@ -93,15 +93,11 @@
                                                             <div class="card-body common-box">
                                                                 <div class="widget-icon primary widget-round">
                                                                     <svg>
-                                                                        <use
-                                                                            href="/assets/assets/svg/icon-sprite.svg#crown">
-                                                                        </use>
+                                                                        <use href="/assets/assets/svg/icon-sprite.svg#crown"></use>
                                                                     </svg>
                                                                 </div>
                                                                 <div>
-                                                                    <h3 class="f-w-600">
-                                                                        {{ number_format(auth()->user()->total_deposit, 0, ',', '.') }}<sup>đ</sup>
-                                                                    </h3>
+                                                                    <h3 class="f-w-600">{{ number_format(auth()->user()->total_deposit, 0, ',', '.') }}<sup>đ</sup></h3>
                                                                     <span class="f-w-500 f-light f-12"> Tổng Nạp </span>
                                                                 </div>
                                                             </div>
@@ -113,17 +109,12 @@
                                                             <div class="card-body common-box">
                                                                 <div class="widget-icon success widget-round">
                                                                     <svg>
-                                                                        <use
-                                                                            href="/assets/assets/svg/icon-sprite.svg#flash">
-                                                                        </use>
+                                                                        <use href="/assets/assets/svg/icon-sprite.svg#flash"></use>
                                                                     </svg>
                                                                 </div>
                                                                 <div>
-                                                                    <h3 class="f-w-600">
-                                                                        {{ number_format(auth()->user()->total_consumption, 0, ',', '.') }}<sup>đ</sup>
-                                                                    </h3>
-                                                                    <span class="f-w-500 f-light f-12"> Đã Sử Dụng
-                                                                    </span>
+                                                                    <h3 class="f-w-600">{{ number_format(auth()->user()->total_consumption, 0, ',', '.') }}<sup>đ</sup></h3>
+                                                                    <span class="f-w-500 f-light f-12"> Đã Sử Dụng </span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -133,15 +124,11 @@
                                                             <div class="card-body common-box">
                                                                 <div class="widget-icon warning widget-round">
                                                                     <svg>
-                                                                        <use
-                                                                            href="/assets/assets/svg/icon-sprite.svg#blend-2">
-                                                                        </use>
+                                                                        <use href="/assets/assets/svg/icon-sprite.svg#blend-2"></use>
                                                                     </svg>
                                                                 </div>
                                                                 <div>
-                                                                    <h3 class="f-w-600">
-                                                                        {{ number_format(auth()->user()->balance, 0, ',', '.') }}<sup>đ</sup>
-                                                                    </h3>
+                                                                    <h3 class="f-w-600">{{ number_format(auth()->user()->balance, 0, ',', '.') }}<sup>đ</sup></h3>
                                                                     <span class="f-w-500 f-light f-12"> Số Dư </span>
                                                                 </div>
                                                             </div>
@@ -153,15 +140,12 @@
                                                             <div class="card-body common-box">
                                                                 <div class="widget-icon secondary widget-round">
                                                                     <svg>
-                                                                        <use
-                                                                            href="/assets/assets/svg/icon-sprite.svg#color-filter">
-                                                                        </use>
+                                                                        <use href="/assets/assets/svg/icon-sprite.svg#color-filter"></use>
                                                                     </svg>
                                                                 </div>
                                                                 <div>
                                                                     <h3 class="f-w-600"> Thành Viên </h3>
-                                                                    <span class="f-w-500 f-light f-12"> Cấp Bậc Tài
-                                                                        Khoản </span>
+                                                                    <span class="f-w-500 f-light f-12"> Cấp Bậc Tài Khoản </span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -173,9 +157,8 @@
                                             <div class="card title-line">
                                                 <div class="card-header card-no-border transaction-header">
                                                     <div class="header-top">
-                                                        <h2> Thống Kê Dịch Vụ <span
-                                                                class="f-light f-12 d-block f-w-500"> Danh Sách Dịch Vụ
-                                                                Đang Sử Dụng </span></h2>
+                                                        <h2> Thống Kê Dịch Vụ <span class="f-light f-12 d-block f-w-500"> Danh Sách Dịch Vụ
+                                                            Đang Sử Dụng </span></h2>
                                                     </div>
                                                 </div>
 
@@ -184,65 +167,47 @@
                                                         <div class="col-md-6 col-6" onclick="loadto('/manage/hosting')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span
-                                                                            class="f-w-500 f-light txt-primary">Hosting
-                                                                            Lưu Trữ </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">Hosting Lưu Trữ </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6 col-6"
-                                                            onclick="loadto('/manage/reseller')">
+                                                        <div class="col-md-6 col-6" onclick="loadto('/manage/reseller')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span
-                                                                            class="f-w-500 f-light txt-primary">Reseller
-                                                                            Hosting </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">Reseller Hosting </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6 col-6"
-                                                            onclick="loadto('/manage/domain')">
+                                                        <div class="col-md-6 col-6" onclick="loadto('/manage/domain')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span class="f-w-500 f-light txt-primary">Tên
-                                                                            Miền </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">Tên Miền </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6 col-6"
-                                                            onclick="loadto('/manage/cronjob')">
+                                                        <div class="col-md-6 col-6" onclick="loadto('/manage/cronjob')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span
-                                                                            class="f-w-500 f-light txt-primary">Cronjobs
-                                                                        </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">Cronjobs </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -250,32 +215,23 @@
                                                         <div class="col-md-6 col-6" onclick="loadto('/manage/vps')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span
-                                                                            class="f-w-500 f-light txt-primary">Cloud
-                                                                            VPS </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">Cloud VPS </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6 col-6"
-                                                            onclick="loadto('/manage/license')">
+                                                        <div class="col-md-6 col-6" onclick="loadto('/manage/license')">
                                                             <div class="card widget-1">
                                                                 <div class="card-body common-space order-card">
-                                                                    <div> <span
-                                                                            class="f-w-500 f-light txt-primary">License
-                                                                        </span>
+                                                                    <div> <span class="f-w-500 f-light txt-primary">License </span>
                                                                         <h3> 0 </h3>
                                                                         <div class="order-content"></div>
                                                                     </div>
-                                                                    <button class="btn btn btn-sm"><i
-                                                                            class="fa fa-angle-right txt-primary"
-                                                                            style="font-size: 15px;"></i></button>
+                                                                    <button class="btn btn btn-sm"><i class="fa fa-angle-right txt-primary" style="font-size: 15px;"></i></button>
                                                                 </div>
                                                             </div>
                                                         </div>
