@@ -3,6 +3,7 @@ namespace App\Livewire\Auth\Login;
 
 use App\Models\ActivityHistory;
 use App\Models\User;
+use App\Repositories\ActivityHistory\ActivityHistoryRepositoryInterface;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Illuminate\Support\Facades\Auth;
@@ -18,9 +19,10 @@ class Form extends Component
     public $errors = [];
     public $otp ,$opt_status;
     public $userId; // Thêm biến để lưu ID người dùng
-
-    public function login()
+    protected $activityHistoryRepository;
+    public function login(ActivityHistoryRepositoryInterface $activityHistoryRepository)
     {
+        $this->activityHistoryRepository = $activityHistoryRepository;
         // Reset lỗi trước khi thực hiện đăng nhập
         $this->errors = [];
 
@@ -61,7 +63,7 @@ class Form extends Component
 
             // Nếu không có 2FA, thực hiện đăng nhập
             Auth::login($user, $this->remember);
-            ActivityHistory::logActivity('Đăng nhập bằng tài khoản');
+            $this->activityHistoryRepository->logActivity('Đăng nhập bằng tài khoản');
             return redirect('/'); // Chuyển hướng đến trang bạn muốn
         } else {
             // Đăng nhập không thành công
@@ -91,7 +93,7 @@ class Form extends Component
         if ($this->otp == $user->otp) {
             // Đăng nhập thành công
             Auth::login($user, $this->remember); // Thực hiện đăng nhập
-            ActivityHistory::logActivity('Đăng nhập thành công với OTP');
+            $this->activityHistoryRepository->logActivity('Đăng nhập thành công với OTP');
             return redirect('/'); // Chuyển hướng đến trang bạn muốn
         } else {
             $this->alert('error', 'Mã OTP không chính xác.');

@@ -31,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\SourceCodeProduct\SourceCodeProductRepositoryInterface::class,
             \App\Repositories\SourceCodeProduct\SourceCodeProductEloquentRepository::class
         );
+        $this->app->singleton(
+            \App\Repositories\ActivityHistory\ActivityHistoryRepositoryInterface::class,
+            \App\Repositories\ActivityHistory\ActivityHistoryEloquentRepository::class
+        );
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Livewire\Page\Profile;
 
 use App\Models\ActivityHistory;
+use App\Repositories\ActivityHistory\ActivityHistoryRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -10,18 +11,15 @@ class Form extends Component
 {
 
     public $activities; // Thuộc tính để lưu trữ lịch sử hoạt động
-
-    public function mount()
+    protected $activityHistoryRepository;
+    public function mount(ActivityHistoryRepositoryInterface $activityHistoryRepository)
     {
+        $this->activityHistoryRepository = $activityHistoryRepository;
 
-        $this->loadActivities(); // Gọi phương thức để tải lịch sử hoạt động
+        $this->activities = $this->activityHistoryRepository->getActivitiesByUserId(Auth::id());
+
     }
 
-    public function loadActivities()
-    {
-        // Lấy tất cả hoạt động của người dùng hiện tại
-        $this->activities = ActivityHistory::getActivitiesByUserId(Auth::id());
-    }
 
     public function render()
     {

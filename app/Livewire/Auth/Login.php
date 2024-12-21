@@ -4,18 +4,19 @@ namespace App\Livewire\Auth;
 
 use App\Models\ActivityHistory;
 use App\Repositories\User\UserRepositoryInterface;
-use Laravel\Socialite\Facades\Socialite;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
-
+use App\Repositories\ActivityHistory\ActivityHistoryRepositoryInterface;
+use Laravel\Socialite\Facades\Socialite;
 class Login extends Component
 {
     protected $userRepository;
-
-    public function mount(UserRepositoryInterface $userRepository): void
+    protected $activityHistoryRepository;
+    public function mount(UserRepositoryInterface $userRepository, ActivityHistoryRepositoryInterface $activityHistoryRepository): void
     {
         $this->userRepository = $userRepository;
+        $this->activityHistoryRepository = $activityHistoryRepository;
     }
 
 
@@ -23,8 +24,10 @@ class Login extends Component
     {
         return Socialite::driver('google')->redirect();
     }
-    public function handleGoogleCallback()
+    public function handleGoogleCallback(UserRepositoryInterface $userRepository, ActivityHistoryRepositoryInterface $activityHistoryRepository)
     {
+        $this->userRepository = $userRepository;
+        $this->activityHistoryRepository = $activityHistoryRepository;
         try {
             $user = Socialite::driver('google')->user();
             $findUser = $this->userRepository->findByEmail($user->email); // Sử dụng hàm mới
@@ -32,7 +35,7 @@ class Login extends Component
             if ($findUser) {
                 // Đăng nhập người dùng nếu email được tìm thấy trong cơ sở dữ liệu
                 Auth::login($findUser);
-                ActivityHistory::logActivity('Đăng nhập bằng Google');
+                $this->activityHistoryRepository->logActivity('Đăng nhập bằng Google');
                 return redirect('/');
             } else {
                 // Tạo người dùng mới nếu email không được tìm thấy
@@ -48,7 +51,7 @@ class Login extends Component
                     'title' => 'Đăng ký thành công với Google!',
                     'message' => 'Chúc bạn có những trải nghiệm tuyệt vời!',
                 ]);
-                ActivityHistory::logActivity('Đăng nhập bằng Google');
+                $this->activityHistoryRepository->logActivity('Đăng nhập bằng Google');
                 return redirect('/');
             }
         } catch (\Exception $e) {

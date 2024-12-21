@@ -11,6 +11,7 @@
         "filament/filament": "3.2.57",
         "jantinnerezo/livewire-alert": "^3.0",
         "laravel/framework": "^11.31",
+        "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
         "pxlrbt/filament-excel": "^2.3"
